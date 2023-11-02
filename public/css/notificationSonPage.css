@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(248, 248, 248) !important;
+}
+
+.body-container {
+    font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto;
+    /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: white;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+}
+
+.titleContainer {
+    background-color: white;
+}
+
+#titleText2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-right: 10%;
+}
+
+.localConBodyForum1 {
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.localConBodyForumPic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.localConBodyForumPic img {
+    width: 200px;
+    height: 200px;
+}
+
+.localConBodyForumText {
+    color: gray;
+    font-size: 25px;
+
+}
+
+.divNone {
+    display: none;
+}
+
+.date {
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+}
+
+.lastWord {
+    text-align: center;
+    color: gray;
+}
+
+.outsideContainer {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+#insideContentTitle {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#hasContent {
+    margin: 15px;
+}
+
+.insideContent {
+    font-size: 15px;
+    margin: 10px 0;
+    color: gray;
+}
+
+.hrLine {
+    border-top: 1px gray solid;
+    color: gray;
+    font-size: 15px;
+}
+
+/* offcanva的設定 */
+
+.offcanvas-end {
+    width: 100% !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* 或者 left: auto; 如果是左边的 offcanvas */
+    bottom: 0;
+    z-index: 1050;
+    /* 需要确保 z-index 足够高以覆盖其他元素 */
+}

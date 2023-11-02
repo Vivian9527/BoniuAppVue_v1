@@ -1,0 +1,511 @@
+/*版面控制*/
+
+@media screen and (max-width: 768px) {
+  /* 在小屏幕上应用的样式 */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* 在中等屏幕上应用的样式 */
+}
+
+@media screen and (min-width: 1025px) {
+  /* 在大屏幕上应用的样式 */
+}
+
+.body-container {
+  position: fixed;
+  /* Fixed position from top */
+  left: 0;
+  width: 100%;
+  height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+  /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+  background-color: #ffffff;
+  border: 1px solid #d1d3e2;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+/*以下為Navbar樣式*/
+
+.navbar-object {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1000; /* 确保导航栏在其他内容之上 */
+  overflow-x: hidden;
+}
+
+/*以下為輪播圖樣式*/
+.slideshow-container {
+  max-width: 99%;
+  position: relative;
+  margin-left: 0.2rem;
+  margin-top: 4rem;
+}
+
+/* 单张轮播图样式 */
+.mySlide {
+  border-radius: 15px; /* 添加圆角 */
+  overflow: hidden; /* 隐藏溢出的部分以保持圆角效果 */
+}
+
+.mySlide img {
+  width: 100%;
+}
+
+/* 圆点样式 */
+.carousel-indicators {
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 0.5rem;
+  bottom: -1rem;
+  height: 0.5rem;
+  position: relative;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+}
+
+/*以下為找人才找企業-按鈕樣式*/
+
+/* 按钮样式 */
+.button-container {
+  margin-left: 10px;
+  display: flex; /*将按钮容器的子元素排列为弹性布局。*/
+  flex-direction: row; /*设置按钮容器内子元素的排列方向为水平排列。*/
+  align-items: center; /* 弹性布局的属性，用于垂直居中容器内的子元素。*/
+  height: 10vh;
+  width: 95%;
+  background-color: #f6f6f6;
+  align-content: stretch;
+  text-decoration: none; /*移除按钮容器内的文本下划线。*/
+  padding: 10px;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.button-container a:active {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: flex-start; /* 文本左对齐 */
+  text-decoration: none;
+  padding: 10px;
+  width: 50%;
+}
+
+.centered-text {
+  display: flex;
+  flex-direction: column; /* 垂直排列文本 */
+  align-items: flex-start; /* 文本靠左 */
+  margin-right: 10px; /* 可以根据需要添加间距 */
+  text-decoration: none;
+}
+
+.FindTalent {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+.FindTalentD {
+  font-size: 15px;
+  color: rgb(198, 198, 198);
+}
+
+.right-bottom-img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+/*以下為招聘選擇卡樣式*/
+.tab-container {
+  overflow-x: auto; /* 允许水平滚动 */
+  width: 100%;
+  margin-left: 1rem;
+  /*移除滾動條*/
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  white-space: nowrap; /* 防止文本换行 */
+  flex-direction: column; /* 将内容区域垂直排列 */
+  display: flex; /* 让选项卡并排显示 */
+  align-items: flex-start; /* 垂直居中对齐 */
+  max-width: 50rem; /* 设置最大宽度 */
+}
+
+.tab-container a {
+  position: sticky;
+  margin-top: -0.3rem;
+  right: 0.6rem;
+  cursor: pointer;
+}
+
+.tab-container a:active {
+  text-decoration: none;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 23%;
+  bottom: 3px; /* 控制线条在字体下方的位置 */
+  width: 50%;
+  height: 3px; /* 设置线条高度 */
+  background: linear-gradient(
+    90deg,
+    rgb(63, 63, 237),
+    rgb(130, 153, 215)
+  ); /* 设置蓝色渐变线条 */
+  opacity: 0; /* 初始状态下线条不可见 */
+  transform-origin: center bottom; /* 以底部中心点为缩放中心 */
+  transition: opacity 0.3s ease; /* 添加过渡效果 */
+  border-radius: 30px;
+
+  /*
+    transform-origin: left;
+    transform: scaleX(0);  初始状态下线条不可见 
+    transition: transform 0.3s ease;  添加过渡效果 
+    */
+}
+
+.tab:hover::after {
+  opacity: 1; /* 鼠标悬停时显示线条 */
+
+  /*transform: scaleX(1); /*鼠标悬停时显示线条*/
+}
+
+.tabs {
+  display: flex;
+  white-space: nowrap;
+}
+
+.tab {
+  position: relative; /* 让 .tab 成为相对定位的父元素 */
+  padding: 10px 20px; /* 调整选项卡的内边距 */
+  background-color: #ffffff;
+  color: #bbb;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: normal; /* 初始状态下不加粗 */
+  display: inline-block; /* 让选项卡变成内联块元素 */
+}
+
+.tab.active {
+  background-color: #ffffff;
+  color: #000; /* 黑色字体颜色 */
+  font-weight: bold; /* 加粗字体 */
+  font-size: larger;
+}
+
+.tab:hover {
+  background-color: #ffffff;
+}
+
+.loader {
+  border: 4px solid #f3f3f3; /* 设置圆圈边框样式 */
+  border-top: 4px solid #3498db; /* 设置圆圈顶部边框样式，可以根据需要更改颜色 */
+  border-radius: 50%; /* 将边框变为圆形 */
+  width: 20px; /* 设置圆圈宽度 */
+  height: 20px; /* 设置圆圈高度 */
+  animation: spin 2s linear infinite; /* 使用动画效果旋转圆圈 */
+  display: none; /* 初始状态下隐藏 */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  /*display: none; /* 默认隐藏所有内容 */
+  background-color: #f8f8f8;
+  overflow-y: scroll;
+  min-height: 60vh;
+  margin-bottom: -5rem;
+}
+
+.content-container {
+  height: 53vh; /* 设置内容区域的最大高度，以便它可以独立滚动 */
+  /*overflow-y: hidden; /* 启用内容区域的垂直滚动条，如果内容溢出容器 */
+  background-color: lightgray;
+  overflow-x: scroll;
+  white-space: nowrap;
+  /*移除滾動條*/
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.content.active {
+  display: block; /* 显示活动选项卡的内容 */
+}
+
+.add-tab {
+  background-color: #ffffff; /* 设置背景颜色 */
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 2rem;
+  color: gray;
+  text-decoration: transparent;
+}
+
+.tabs a {
+  background-color: #ffffff; /* 鼠标悬停时的背景颜色 */
+  text-decoration: transparent;
+}
+
+/* 调整热门和最新按钮容器的样式，将其放在选项卡下方左边 */
+.additional-tabs {
+  position: relative;
+  top: -20px; /* 定位在选项卡底部 */
+  left: 10px; /* 调整左边距 */
+  display: flex;
+  flex-direction: row; /* 水平排列按钮 */
+  margin-bottom: -20px;
+  background-color: none;
+}
+
+/* 调整按钮的样式，以适应在同一列中显示 */
+.additional-tab {
+  background-color: #ffffff;
+  text-decoration: none;
+  color: gray; /* 初始颜色为灰色 */
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px; /* 调整按钮之间的垂直间距 */
+  transition: color 0.1s; /* 添加颜色过渡效果 */
+}
+
+.additional-tab:focus {
+  outline: none; /* 去除默认的聚焦边框 */
+}
+
+.additional-tab:hover {
+  color: blue; /* 鼠标悬停时改为蓝色 */
+}
+
+/* 调整地點和篩選按钮容器的样式，将其放在选项卡下方右边 */
+
+.additional-tabs-right {
+  position: relative;
+  top: -2.2rem; /* 定位在选项卡底部 */
+  left: 68%; /* 调整左边距 */
+  display: flex;
+  flex-direction: row; /* 水平排列按钮 */
+  margin-bottom: -20px;
+  background-color: none;
+}
+
+/*以下為選擇卡內容樣式*/
+
+.job-card {
+  width: 95%; /* 根据需要调整宽度 */
+  padding: 10px;
+  position: relative;
+  border: none;
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.image-icon {
+  width: 25px;
+}
+
+.salary {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.requirements {
+  display: flex;
+  justify-content: flex-start;
+  background-color: none;
+  padding: 10px;
+  margin-top: 2px;
+  text-align: center; /* 水平居中文本 */
+}
+
+.requirement {
+  display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+  background-color: #f8f8f8;
+  padding: 5px;
+  margin-bottom: 30px; /* 添加适当的外边距 */
+  margin-right: 10px; /* 减少左右外边距，使格子更接近 */
+}
+
+.company {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.company img {
+  width: 20px; /* 根据需要调整图片大小 */
+  height: 20px;
+  margin-right: 5px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+
+.company-name {
+  margin-left: 5px; /* 可以根据需要调整间距 */
+}
+
+.empty {
+  height: 35vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty img {
+  height: 20vh;
+  margin: 1rem;
+}
+
+.empty-text {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: gray;
+}
+
+/*以下為footer樣式*/
+.footer-object {
+  position: fixed;
+  bottom: -2rem;
+  left: 0;
+  width: 100%;
+  height: 100px; /* 请根据您的需求调整高度 */
+  z-index: 100;
+}
+
+/*滾動樣式*/
+#navbar.scroll {
+  /* 滚动后的样式，例如固定在顶端，背景颜色等 */
+  position: fixed;
+  z-index: 2000;
+  /* 添加其他样式 */
+}
+
+#job.scroll {
+  /* 滚动后的样式，例如固定在顶端，背景颜色等 */
+  position: fixed;
+  z-index: 2000;
+  /* 添加其他样式 */
+}
+
+#btn.scroll {
+  /* 滚动后的样式，例如固定在顶端，背景颜色等 */
+  position: fixed;
+  z-index: 2000;
+  /* 添加其他样式 */
+}
+
+/* 其他改動 */
+.offcanvas {
+  visibility: visible !important;
+}
+
+/* offcanva的設定 */
+
+.offcanvas-end {
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* 或者 left: auto; 如果是左边的 offcanvas */
+  bottom: 0;
+  z-index: 1050;
+  /* 需要确保 z-index 足够高以覆盖其他元素 */
+}
+
+
+
+.offcanvas-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-fullscreen.show {
+  transform: translateX(0);
+}
+
+
+/*導覽列*/
+
+#searchDiv {
+  position: relative;
+  display: inline-block;
+}
+
+#searchDiv img {
+  position: absolute;
+  left: 12px;
+  top: calc(50% - 0.5em);
+}
+
+#searchDiv input {
+  text-indent: 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+#narbarText {
+  height: 30px;
+  /*    background-color:red;*/
+}

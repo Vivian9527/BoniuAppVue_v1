@@ -1,0 +1,69 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+.body-container {
+  font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color:#eeeeee;
+    overflow-y:scroll ;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+        
+}
+/* 使选项卡固定在底部 */
+.nav-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 可能需要调整 z-index 以确保选项卡在其他元素之上 */
+    background-color: #fff; /* 可以根据需要设置背景颜色 */
+}
+
+/* 调整内容区域的上边距以避免被选项卡遮挡 */
+.tab-content {
+    position: absolute;
+    margin-top: -3rem;
+    margin-left: -1rem;
+    /* width: 26rem; */
+    width: 100%;
+    /* height: 49rem;  */
+    height: 60rem; 
+    overflow-y: auto; /* 如果内容超过视窗高度，启用垂直滚动条 */
+}
+
+.navtab-container {
+    /* margin-bottom: 8rem; */
+    margin-bottom: 3rem;
+}
+
+.tab-container {
+    margin-top: 0!important;
+}
+
+#myTabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px gray solid;
+}

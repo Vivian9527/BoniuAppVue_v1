@@ -1,0 +1,374 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+.body-container {
+  font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color:#eeeeee;
+    overflow-y:scroll ;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+}
+
+.offcanvas-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-fullscreen.show {
+    transform: translateX(0);
+}
+
+.btn {
+    border: none;
+    padding: 0;
+}
+
+.custom-backbtn {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-backbtn img {
+    width: 2rem;
+    height: auto;
+}
+
+.profile-TGGroupBody {
+    padding: 0;
+    margin-top: 4.2rem;
+    background-color: #ebebeb;
+}
+
+.profile-TGGroupHeader {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 0;
+}
+
+.profile-TGGroupTitle {
+    position: fixed;
+    color: black;
+    font-weight: bold;
+    left: 40%;
+    font-size: 1.5rem;
+}
+
+
+
+.setting-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 0.1rem solid #bebebe;
+    background-color: white;
+    padding: 1rem;
+}
+
+.setting-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 45%;
+}
+
+.setting-blockContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.setting-blocksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 0.1rem solid #bebebe;
+}
+
+.setting-blocksContainer:last-child{
+    border-bottom: none; /* 移除最后一个容器的底部边框 */
+}
+
+.setting-blocksContainerTitle {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.setting-ClearCache {
+    color: #bebebe;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.setting-openicon {
+    width: auto;
+    height: 1rem;
+}
+
+.setting-Logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.setting-LogoutTitle {
+    font-weight: bold;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.setting-NotificationHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+    margin-top: 4rem;
+}
+
+.setting-NotificationHeaderTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.setting-NotificationHeaderText {
+    color: rgb(118, 193, 239);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.setting-NotificationBody {
+    background-color: #ebebeb;
+}
+
+.setting-NotificationBTn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom: 0.1rem solid #bebebe;
+}
+
+.custom-checkbox:checked {
+    background-color: #57f357;
+    border: none;
+    width: 4rem;
+    height: 2rem;
+}
+
+.setting-NotificationBTNTitle {
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 2rem; /* 控制图标距离输入框左侧的距离 */
+    z-index: 2; /* 确保图标在输入框之上 */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 2rem;
+    background-color: #eeeeee;
+    color: #aeaeae;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    caret-color: blue; /* 游标颜色为蓝色 */
+    padding: 0.5rem 0 0.5rem 3rem;
+}
+
+.profile-SubscribeList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0 1rem 0 1rem;
+}
+
+.profile-SubscribeName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom:1px solid #bebebe;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-SubscribeName img {
+    width: auto;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit:initial;
+}
+
+.profile-SubscribeNameText {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-SubscribeListNone {
+    display: flex;
+    justify-content: center;
+    background-color:transparent;
+    color: #bebebe;
+    margin-top: 1rem;
+}
+
+.custom-alertmodal {
+    padding: 0 0.5rem;
+    position: absolute;
+    white-space: nowrap;
+    display: flex;
+    width: 33%;
+    margin-top: 100%;
+    margin-left: 33%;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting-AccountSecurityBody {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.setting-AccountSecurityBTn {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 0.1rem solid #bebebe;
+}
+
+.PrivacySecurity-Body {
+    background-color:#eeeeee;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.PrivacySecurity-Header {
+    border-bottom: 0.1rem solid #bebebe;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 0;
+}
+
+.setting-PrivacySecurityBody {
+    margin-top: 4rem;
+}
+
+.AboutUs-Body {
+    background-color:#fff;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+/* 将整个版面居中，并保持响应式设计 */
+.setting-AboutUsBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 文本水平居中 */
+    height: 100vh; /* 让容器占据整个视口高度 */
+    justify-content: center; /* 水平和垂直居中 */
+}
+
+/* "BONIU-Version" 样式 */
+.BONIU-Version {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* 垂直居中 */
+}
+
+.BONIU-Version img {
+    width: auto;
+    height: 4rem;
+}
+
+.BONIU-VersionText {
+    color: #bebebe;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* "BONIU-policy" 样式 */
+.BONIU-policy {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 垂直居中 */
+    gap: 2rem;
+    position: relative; /* 相对定位，以适应 "bottom" 属性 */
+    bottom: -35%;
+    left: 0; /* 重置左边距 */
+}
+
+.BONIU-policyText {
+    color: blue;
+    font-size: 1rem;
+}

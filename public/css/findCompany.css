@@ -1,0 +1,298 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+  
+  
+.body-container {
+    /* Fixed position from top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    border: 1px solid #d1d3e2;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+
+/* 页面整体样式 */
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    z-index: 100;
+}
+
+.publish-button {
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease; /* 添加背景颜色的过渡效果 */
+    color: #888;
+}
+
+.publish-button:active {
+    background-color: #ccc; /* 按下按钮时的背景颜色 */
+    border-radius: 3rem;
+}
+
+.publish-button:hover {
+    outline: none;
+    border-radius: 3rem;
+}
+
+.searchbar {
+    text-decoration: none;
+    position: fixed;
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    margin-top:  5rem;
+    margin-left: 0.35rem;
+    margin-bottom: 1rem;
+    width: 98%;
+    height: 2rem;
+    z-index: 100;
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.searchbarContainer {
+    text-decoration: none; 
+    background-color: white;
+    margin-top: -1rem;
+}
+
+.searchbar input {
+    border: none; /* 去掉边框 */
+    outline: none; /* 去掉聚焦时的外边框 */
+    background: transparent; /* 设置背景为透明 */
+    font-size: 1rem;
+    width: 95%;
+}
+
+
+.searchbar input::placeholder {
+    text-align: start; /* 将placeholder文本居中 */
+}
+
+/* 公司列表样式 */
+.company-list {
+    margin-top: 7rem;
+    width:calc(100%); /* 根据需要调整宽度 */
+    position: relative;
+    border: none;
+    background-color: #ffffff;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: calc(-4%);
+}
+
+
+
+.image-container {
+    width: 3rem; /* 调整容器的大小 */
+    height: 3rem;
+    overflow: hidden; /* 超出容器部分隐藏 */
+    border:0.1rem solid #888;
+    border-radius: 50%; /* 使容器成为圆形 */
+    display: flex; /* 让内部内容垂直和水平居中 */
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+
+/* 在容器内添加图像 */
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.location {
+    display: flex;
+    margin-left: 4.5rem;
+    margin-top: -1.5rem;
+    color:gray;
+    font-size: 0.8rem;
+}
+   
+
+.name {
+    display: flex;
+    font-weight: bold;
+    margin-left: calc(2%);
+    font-size: 1.3rem;
+}
+
+.job {
+    display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+    background-color:transparent;
+    margin-left: calc(5%);
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.custom-sharebtn {
+    background-color: transparent;
+}
+
+.profile-myhireBTNs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.offcanvas-halfscreen {
+    width: 100%;
+    height: 88%;
+    overflow-y: scroll;
+    background-color:white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-backbtn {
+    margin: 1rem;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-backbtn img {
+    width: auto;
+    height: 2rem;
+}
+
+.custom-checkbox {
+    padding: 1rem;
+}
+
+.checkbox-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.custom-check {
+    color: gray;
+    background-color: #bebebe;
+    border: none;
+}
+
+.custom-check:hover {
+    background-color:rgb(193, 230, 255);
+    color: blue;
+    border: none;
+}
+
+#upperradio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 创建四个相等宽度的列 */
+    gap: 10px; /* 列之间的间距 */
+   white-space: nowrap;
+   justify-items: center;
+}
+
+#upperradio label {
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 5rem;
+}
+
+
+#lowerradio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 创建四个相等宽度的列 */
+    gap: 10px; /* 列之间的间距 */
+    white-space: nowrap;
+    justify-items: center;
+}
+
+#lowerradio label {
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 5rem;
+}
+
+
+.confirmBTN {
+    position: relative;
+    width: 95%;
+    height: 2rem;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2.5%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#upperradio input[type="radio"] {display: none; }
+#upperradio input:checked + .button {background: #d1daff; color: blue; cursor: default; }
+#upperradio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #888; cursor: pointer; }
+#upperradio .button:hover {background: #bbb; color: #fff; }
+#upperradio .round {border-radius: 5px; width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+#lowerradio input[type="radio"] {display: none; }
+#lowerradio input:checked + .button {background: #d1daff; color: blue; cursor: default; }
+#lowerradio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #888; cursor: pointer; }
+#lowerradio .button:hover {background: #bbb; color: #fff; }
+#lowerradio .round {border-radius: 5px; width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+

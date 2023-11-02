@@ -1,0 +1,2 @@
+(function(){if("file:"===window.location.protocol||"3000"===window.location.port){var t=document.createElement("script");t.setAttribute("type","text/javascript"),t.setAttribute("src","cordova.js"),document.body.appendChild(t)}})();
+//# sourceMappingURL=app.35970779.js.map

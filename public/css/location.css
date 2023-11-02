@@ -1,0 +1,188 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+/* 基本样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.body-container {
+    position: fixed;
+    /* Fixed position from top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    border: 1px solid #d1d3e2;
+    padding: 5px;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#backButton {
+    text-decoration: none;
+    color: #000000;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+p {
+    margin: 0;
+    color: #000000;
+    margin-left: 30%;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    height:85%;
+}
+
+.left {
+    background-color: white;
+    flex: 1;
+    padding: 1vh;
+    overflow-y: scroll;
+    text-align: center;
+    /*清除滾動條樣式*/
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+}
+
+.countrys {
+    list-style-type: none;
+    padding: 0;
+}
+
+.country {
+    color: grey;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+    margin-top: 28px;
+    font-size: 18px;
+}
+
+.country:hover {
+    color: blue;
+}
+
+.right {
+    background-color: #f8f8f8;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vh;
+}
+
+.cityList {
+    display: block;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+}
+
+.city {
+    color: gray;
+    font-size: 1rem;
+    margin-left:3vh;
+    margin-top: 4vh;
+    text-align: left; /* 文本左对齐 */
+}
+
+button#cityButton {
+    background-color: gray;
+    color: darkgray;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button#cityButton.clicked {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    bottom: 0;
+    position: fixed;
+    width: 95%;
+    height: 3rem;
+}
+
+button#clearButton {
+    width: 120px; /* 设置清除按钮的宽度，你可以根据需要调整这个值 */
+    display: inline-block;
+    background: none;
+    border: 1px solid blue;
+    color: blue;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 50px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+
+button#confirmButton {
+    width: calc(90% - 120px); /* 设置确定按钮的宽度，减去清除按钮的宽度，确保按钮总宽度不超过50% */
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+
+/* 被選中的樣式 */
+/* 左半邊 */
+.selected {
+    color: blue; 
+}
+/* 右半邊 */
+.selected1 {
+    color: blue; 
+}
+

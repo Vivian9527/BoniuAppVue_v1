@@ -1,0 +1,338 @@
+.body-container {
+    font-family: "Microsoft JhengHei", sans-serif;
+      position: absolute;
+      /* Fixed position from top */
+      width: calc(100%);
+      height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+      /*
+          原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+          - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+          - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+          综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+      */
+      background-color:white;
+      overflow-y:scroll ;
+      &::-webkit-scrollbar{
+          width: 0px;
+          } 
+  }
+
+  .header {
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    z-index: 100;
+    align-items: center;
+}
+
+.custom-backbtn {
+    background-color: transparent; /* 设置背景色为透明 */
+    border: none; /* 设置边框颜色为透明 */
+    color: #333; /* 设置文本颜色 */
+}
+
+.custom-backbtn:hover {
+    background-color: transparent;
+}
+
+.header-img1 {
+    height: 2.5rem;
+    width: auto;
+}
+
+.header-img2 {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+.header-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.offcanvas-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-TGGroupBody {
+    padding: 0;
+    margin-top: 4.2rem;
+    background-color: white;
+}
+
+.profile-TGGroupHeader {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    margin-left: 0;
+}
+
+.profile-TGGroupTitle {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    left: 40%;
+    font-size: 1.5rem;
+}
+
+.custom-backbtn {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-backbtn img {
+    width: 2rem;
+    height: auto;
+}
+
+.profile-CompanyTitle {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 30% auto;
+    align-items: center;
+}
+
+.profile-CompanyTitles2 {
+    color: #aeaeae;
+}
+
+.profile-CompanyTitle img {
+    width: auto;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: initial;
+    margin: 2rem 0;
+}
+
+.MoneyBox {
+    background: linear-gradient(90deg, rgb(222, 129, 15), rgb(208, 88, 16));
+    display: flex;
+    margin: auto;
+    width: 90%;
+    padding: 1rem;
+    height: 10rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+}
+
+.MoneyBoxLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.MoneyBoxLeftTitle {
+    color: white;
+}
+
+.MoneyBoxLeft-balance {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.BalanceCount {
+    color: white;
+    font-size: 2rem;
+}
+
+.BalanceBox {
+    background-color: white;
+    color: orangered;
+    border-radius: 2rem 2rem 2rem 0;
+    width: 5.5rem;
+    font-weight: bold;
+    display: flex;
+    height: 1rem;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+}
+
+.MoneyBoxLeft-rules {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.MoneyBoxLeft-rules img {
+    width: auto;
+    height: 1rem;
+}
+
+.MoneyBoxLeft-rulesText {
+    color: white;
+    font-size: 0.8rem;
+    white-space: nowrap;
+} 
+
+.MoneyBoxRight {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.MoneyBoxRightText {
+    color: white;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.XBBBodyContainer {
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
+.XBBbolderText {
+    font-weight: bold;
+    color: black;
+    font-size: 1.5rem;
+    margin: 1rem 0
+}
+
+.XBBCoin {
+    color: #df5523;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 4%;
+    top: 25rem;
+}
+
+#upperradio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 创建四个相等宽度的列 */
+    gap: 10px; /* 列之间的间距 */
+   white-space: nowrap;
+   justify-items: center;
+}
+
+#upperradio label {
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 5rem;
+}
+
+
+#lowerradio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 创建四个相等宽度的列 */
+    gap: 10px; /* 列之间的间距 */
+    white-space: nowrap;
+    justify-items: center;
+}
+
+#lowerradio label {
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 5rem;
+}
+
+#upperradio input[type="radio"] {display: none; }
+#upperradio input:checked + .button {background: white; color: black; cursor: default; border: 0.1rem solid #df5523; }
+#upperradio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #888; cursor: pointer;  font-size: 1rem;border: 0.1rem solid black;padding: 0.5rem 1rem;}
+#upperradio .button:hover {background: #bbb; color: #fff; border: 0.1rem solid #df5523; }
+#upperradio .round {border-radius: 5px; width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+#lowerradio input[type="radio"] {display: none; }
+#lowerradio input:checked + .button {background: white; color: black; cursor: default; }
+#lowerradio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: white; color: black; cursor: pointer; font-size: 1rem;border: 0.1rem solid black;padding: 0.5rem 1rem;}
+#lowerradio .button:hover {background: white; color: black; border: 0.1rem solid #df5523;}
+#lowerradio .round {border-radius: 5px; width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+
+.XBBbolderText2 {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+    margin: 1rem 0
+}
+
+.XBBrulesDetail {
+    color: #959595;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.XBBWithdrawBTN {
+    background-color: #df5523;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.XBB-iframe {
+    position: relative;
+    top: 7%;
+    height: 93%;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.sharingbox {
+    height: 20%;
+    background-color: #eeeeee;
+}
+
+.XBB-browserContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.XBB-browserContainerBold {
+    font-weight: bold;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #d6d6d6;
+}

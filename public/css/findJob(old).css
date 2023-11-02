@@ -1,0 +1,198 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+  
+  
+.body-container {
+    position: fixed;
+    /* Fixed position from top */
+    left: 0;
+    width: calc(100%);
+    height: calc(100vh); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    gap:calc(25%);
+    font-size: 1.5rem;
+}
+
+.myHashtag {
+    padding: 1.2rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+hr {
+    color: #d1d3e2;
+    height: 0.1rem;
+    width: 95%;
+}
+
+.tab-container {
+    overflow-x: auto; /* 允许水平滚动 */
+    width:100%;
+    margin-left: 1rem;
+    /*移除滾動條*/
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+
+    white-space: nowrap; /* 防止文本换行 */
+    flex-direction: column; /* 将内容区域垂直排列 */
+    display: flex; /* 让选项卡并排显示 */
+    align-items: flex-start; /* 垂直居中对齐 */
+    max-width: 50rem; /* 设置最大宽度 */
+}
+
+
+.tabs {
+    display: flex;
+    white-space: nowrap;
+}
+
+.tab {
+    position: relative; /* 让 .tab 成为相对定位的父元素 */
+    padding: 0.5rem 1rem; /* 调整选项卡的内边距 */
+    background-color: #ffffff;
+    color:gray;
+    cursor: pointer;
+    transition:  0.1s;
+    display: inline-block; /* 让选项卡变成内联块元素 */
+    font-size: 1.3rem;
+    font-weight:bold;
+}
+
+.tab:hover {
+    background-color: #ffffff;
+    color: #000; /* 黑色字体颜色 */
+    font-weight: bolder; /* 加粗字体 */
+}
+
+.content {
+    /*display: none; /* 默认隐藏所有内容 */
+    background-color: #ffffff;
+    padding: 0 1rem;
+}
+
+.content-container {
+    height:68vh; /* 设置内容区域的最大高度，以便它可以独立滚动 */
+    /*overflow-y: hidden; /* 启用内容区域的垂直滚动条，如果内容溢出容器 */
+    background-color:white;
+    overflow-x: scroll;
+    white-space: nowrap;
+    /*移除滾動條*/
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+}
+
+.content.active {
+    display: block; /* 显示活动选项卡的内容 */
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.label-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许在空间不足时换行 */
+    margin: 1rem 0;
+  }
+
+
+  input[type="checkbox"] {
+    /*取消自带按钮*/
+    color:gray;
+    display: none;
+}
+
+.label-container label{
+    /*未选中状态*/
+    background-color: #dedede;
+    color: #333333;
+    font-size: 13px;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 1em;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    transition-delay: 9999s;/*讓label保留的方法*/
+    font-size: 0.8rem;
+}
+
+.label-container label:hover{
+    /*选中状态*/
+    background-color: hsla(219, 100%, 68%, 0.5);
+    color: blue;
+    font-size: 13px;
+    padding:0.5rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition-delay: 0s;/*讓label保留的方法*/
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-color: #ffffff;
+}
+
+.footer button {
+    background-color: blue;
+    color: #ffffff;
+    padding: 0.5rem;
+    width:80%;
+    height:90%;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.footer button:hover {
+    border: none;
+
+}
