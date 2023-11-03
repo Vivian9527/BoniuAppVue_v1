@@ -1,0 +1,235 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+  
+  
+  .body-container {
+    position: fixed;
+    /* Fixed position from top */
+    left: 0;
+    width: 100%;
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    border: 1px solid #d1d3e2;
+    padding: 5px;
+    overflow-y: scroll;
+    font-family: "Microsoft JhengHei", sans-serif;
+    margin: 0;
+}
+
+
+
+
+hr {
+    width: 100%;
+    height: 0.1rem;
+    margin-top: 1rem;
+    color: #ececec;
+}
+
+/* 头部样式 */
+.head {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    z-index: 100;
+}
+
+.publish-button {
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease; /* 添加背景颜色的过渡效果 */
+    color: #888;
+}
+
+.publish-button:active {
+    background-color: #ccc; /* 按下按钮时的背景颜色 */
+    border-radius: 3rem;
+}
+
+.publish-button:hover {
+    outline: none;
+    border-radius: 3rem;
+}
+
+
+  /* 关闭按钮样式 */
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+
+
+.searchbar {
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-left: 0.35rem;
+    width: 98%;
+    height: 2rem;
+    z-index: 100;
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+
+.searchbar input {
+    border: none; /* 去掉边框 */
+    outline: none; /* 去掉聚焦时的外边框 */
+    background: transparent; /* 设置背景为透明 */
+    font-size: 1rem;
+    width: 95%;
+}
+
+
+.searchbar input::placeholder {
+    text-align: start; /* 将placeholder文本居中 */
+}
+
+
+/* 导航栏样式 */
+
+.tabs {
+    display: flex;/*水平排列*/
+    padding: 1rem 1.2rem;
+    gap:1rem;
+    text-decoration: none;
+    color: #000000;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+
+
+.content-container {
+    background-color: #ffffff;
+    display: none;
+}
+
+.content {
+    overflow-y: scroll;
+}
+
+.filter {
+    float: right;
+    font-weight: bold;
+    margin-left: 6rem;
+}
+
+/* 员工列表样式 */
+.employee-list {
+    width:calc(100%); /* 根据需要调整宽度 */
+    position: relative;
+    border: none;
+    background-color: #ffffff;
+    height: calc(85%);
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: calc(-4%);
+}
+
+
+
+.image-container {
+    width: 3rem; /* 调整容器的大小 */
+    height: 3rem;
+    overflow: hidden; /* 超出容器部分隐藏 */
+    border:0.1rem solid #888;
+    border-radius: 50%; /* 使容器成为圆形 */
+    display: flex; /* 让内部内容垂直和水平居中 */
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+
+/* 在容器内添加图像 */
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.experience {
+    display: flex;
+    margin-left: calc(17%);
+    margin-top: calc(-1.5rem);
+    color:gray;
+}
+
+.name {
+    display: flex;
+    font-weight: bold;
+    margin-left: calc(2%);
+    font-size: 1.3rem;
+}
+
+.salary {
+    font-size: 0.9rem;
+    margin-left: calc(55%);
+    white-space: nowrap;
+}
+
+.blue-text {
+    color:gray;
+}
+
+.requirements {
+    display: flex;
+    justify-content: flex-start;
+    background-color: none;
+    padding: 10px;
+    margin-top: 2px;
+    text-align: center; /* 水平居中文本 */
+    margin-left: calc(3%);
+}
+
+.requirement {
+    display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+    background-color:#f8f8f8;
+    padding: 5px;
+    margin-right:10px; /* 减少左右外边距，使格子更接近 */
+}
+

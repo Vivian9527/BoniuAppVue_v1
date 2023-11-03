@@ -1,0 +1,169 @@
+.body-container {
+    font-family: "Microsoft JhengHei", sans-serif;
+      position: absolute;
+      /* Fixed position from top */
+      width: calc(100%);
+      height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+      /*
+          原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+          - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+          - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+          综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+      */
+      background-color:#eeeeee;
+      overflow-y:scroll ;
+      &::-webkit-scrollbar{
+          width: 0px;
+          }
+  }
+
+  .searchbar input::placeholder {
+    text-align: start; /* 将placeholder文本居中 */
+}
+  
+
+  .searchbar {
+    text-decoration: none;
+    position: fixed;
+    background-color: #eaeaea;
+    padding: 0.2rem 0.5rem;
+    width: 80%;
+    margin: 1rem 0 1rem 0.5rem;
+    border-radius: 1rem;
+    height: 2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+.searchbarContainer {
+    text-decoration: none;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+}
+
+.searchbar input {
+    border: none; /* 去掉边框 */
+    outline: none; /* 去掉聚焦时的外边框 */
+    background: transparent; /* 设置背景为透明 */
+    color: black;
+    font-size: 1rem;
+    width: 95%;
+    margin-left: 0.5rem;
+}
+
+.searchbar input:focus {
+    caret-color: blue; /* 设置光标颜色为蓝色 */
+}
+
+.custom-backbtn {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 1rem;
+    white-space: nowrap;
+    left: 85%;
+    text-decoration: none;
+}
+
+.custom-backbtn div {
+   color: blue;
+   font-size: 1.3rem;
+}
+
+.SearchForAllPagesAD {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-bottom: 0.1rem solid #eaeaea;
+}
+
+.SearchForAllPagesAD img {
+    width: 100%;
+    height: 9rem;
+    object-fit: initial;
+    border-radius: 1rem
+}
+
+.SearchForAllPagesADLink {
+    background-color: #afafaf;
+    color: white;
+    width: 2rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    top: 0.5rem;
+    left: 91%;
+    border: none;
+}
+
+.SearchForAllPagesADPopup {
+    display: none;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.SearchForAllPagesSearcHistory {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+}
+
+.SearchForAllPagesSearcHistoryTitle {
+    color: #bebebe;
+    border-bottom: 0.1rem solid #eaeaea;
+    padding: 1rem 0;
+}
+
+.SearchForAllPagesSearcHistorys {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #eaeaea;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.SearchForAllPagesSearcHistoryClockImg {
+    width: auto;
+    height: 2rem;
+}
+
+.SearchForAllPagesSearcHistoryText {
+    color: black;
+    left: 12%;
+    position: absolute;
+}
+
+.SearchForAllPagesSearcHistoryClearBTN {
+    text-decoration: none;   
+}
+
+.SearchForAllPagesSearcHistoryClearImg {
+    width: auto;
+    height: 1.5rem;
+}
+
+.SearchForAllPagesSearcHistoryClearBTN2 {
+    width: 100%;
+    color: #5c5cc4;
+    padding: 1rem 0;
+    text-align: center;
+}

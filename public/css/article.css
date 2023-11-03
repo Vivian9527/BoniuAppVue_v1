@@ -1,0 +1,853 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+.body-container {
+  font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: white;
+    overflow-y:scroll ;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+        
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #dedede;
+    z-index: 100;
+    align-items: center;
+}
+
+.custom-backbtn {
+    background-color: transparent; /* 设置背景色为透明 */
+    border-color: transparent; /* 设置边框颜色为透明 */
+    color: #333; /* 设置文本颜色 */
+}
+
+.custom-backbtn:hover {
+    background-color: transparent;
+}
+
+.header-img1 {
+    height: 2.5rem;
+    width: auto;
+}
+
+.header-img2 {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+.header-img3 {
+    height: 1.5rem;
+    width: auto;
+    margin-top: 0.7rem;
+}
+
+.header-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eeeeee;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    margin-left: 4%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.header-link img {
+    height: 1.5rem;
+    width: auto;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    padding:1rem;
+    overflow-y:scroll ;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+}
+
+.article-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.author {
+    width: 100%;
+    height:4rem;
+    display: flex;
+    flex-direction: row;
+    margin:1rem 0;
+}
+
+.profilePic {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.officialCertification-icon {
+    background-color: rgb(26, 192, 26);
+    color: white;
+    border: 0.2rem solid white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    top:-1.5rem;
+    left:2.5rem;
+    position: relative;
+}
+
+.profilePic img {
+    width: 4rem; /* 设置图像宽度 */
+    height: 4rem; /* 设置图像高度，以确保是正方形 */
+    object-fit: initial; /* 让图像充满整个元素 */
+    clip-path: circle(50%); /* 创建圆形遮罩 */
+}
+
+.author-name {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+    white-space: nowrap;
+}
+
+.author-names {
+    font-weight: bold;
+}
+
+.time {
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.certification-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.certification-icons {
+    height: 2rem;
+    width: auto;
+    margin-left: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+.reading-count {
+    color:#bebebe;
+    font-size: 0.8rem;
+    position: inherit;
+    margin-top: -0.2rem;
+}
+
+.subscribe {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 4rem;
+    height: 1.8rem;
+    color: white;
+    border-radius: 40px;
+    right: 4%;
+    padding: 0.1rem;
+    margin-top: -0.5rem;
+    font-weight: bold;
+}
+
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-indent: 2rem;/*使用 text-indent 属性来设置段落或文本的首行缩进。*/
+    line-height: 2; /* 设置行高为2倍文本字体大小 */
+    letter-spacing: 1px; /* 设置字符间距为1像素 */
+    white-space: pre-line;
+}
+
+
+
+.article-content img {
+    width:80%;
+    height: 15rem;
+    object-fit: initial;
+    margin: 1rem 10%;
+}
+
+.article-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eeeeee;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    justify-content: center;
+}
+
+.footer-link img {
+    height: 1rem;
+    width: auto;
+}
+
+.related-article {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+}
+
+.related-article a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.related-title {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    border-top: 10px solid #dedede;
+}
+
+.related-articles {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eeeeee;
+    padding: 0.8rem;
+}
+
+.related-articlesTitle {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.related-text {
+    font-size: 0.7rem;
+    color:#bebebe;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    padding:1.5rem 1rem 0 1rem;
+    border-top:10px solid #dedede ;
+    border-bottom:10px solid #dedede ;
+}
+
+.ad-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.ad-link:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.ad img {
+    width:100%;
+    height: 8rem;
+    object-fit: initial;
+}
+
+.ad-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.ad-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ad-author {
+    font-size: 0.8rem;
+    color:#bebebe;
+}
+
+.ad-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bebebe;
+    color: white;
+    font-size: 0.7rem;
+    width: 2rem;
+    position: relative;
+    left:90%;
+    top:-1.2rem;
+}
+
+.custom-tabs .nav-link {
+    color:#bebebe; /* 替换为你希望的文字颜色 */
+}
+
+.custom-tabs .nav-link:hover {
+    color: #000000; /* 替换为你希望的鼠标悬停时的文字颜色 */
+    font-weight: bold;
+}
+
+.none {
+    padding: 1rm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.none img {
+    height:auto;
+    width: 60%;
+}
+
+.Comments {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1rem;
+}
+
+.allComments-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.CprofilePic {
+    width: 2.5rem; /* 设置图像宽度 */
+    height: 2.5rem; /* 设置图像高度，以确保是正方形 */
+    object-fit: initial; /* 让图像充满整个元素 */
+    clip-path: circle(50%); /* 创建圆形遮罩 */
+    border: 1px solid #eeeeee;
+    margin-right: 0.5rem;
+}
+
+.comment-author {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+
+.comment-authors {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.comment-list {
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.author-icon {
+    position: relative;
+    height:1rem;
+    width:auto;
+    margin-top: -70%;
+    margin-left: -2%;
+}
+
+.ownerComments {
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.like {
+    position: absolute;
+    height: 1.5rem;
+    width: auto;
+    right: 2rem;
+}
+
+.like-text {
+    position: absolute;
+    right: 1rem;
+    color: #bebebe;
+}
+
+.author-comments {
+    margin: 1rem 0;
+    height: auto;
+}
+
+.comment-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comment-time {
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.comment-img {
+    position: absolute;
+    right: 3rem;
+    height: 1.5rem;
+    width: auto;
+}
+
+.reply {
+    color: #bebebe;
+    position: absolute;
+    right: 1rem;
+}
+
+.bottom {
+    height: 4rem;    
+    background-color: #eeeeee;
+    color: #bebebe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-color: white;
+    width: 100%;
+    bottom: -0.1rem;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-top:1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
+}
+
+.writingComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#eeeeee;
+    color: #bebebe;
+    border-radius: 2rem;
+    height:2rem;
+    width: 50%;
+}
+
+.footer-img {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    right: 4%;
+    bottom: 12%;
+}
+
+.footer-img img {
+    width: 2rem;
+    height: auto;
+}
+
+.comment-count {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.modal-img {
+    width: 2rem;
+    height: 2rem;
+    position:absolute;
+    left: 4%;
+    bottom:5%;
+  }
+
+  .custom-modalbody {
+    background-color: #eeeeee;
+    color: #333;
+    border: none;
+    min-height: 15rem;
+  }
+
+  .custom-modalbody:hover {
+    background-color: #eeeeee;
+    color: #333;
+    border: none;
+  }
+
+  .btn-no-color {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    text-decoration: none;
+    /* 可根据需要添加其他样式 */
+}
+
+.comment-replybtn{
+    background-color: white;
+    display: contents;
+}
+
+.like-count {
+    display: flex;
+    flex-direction: row;
+}
+
+.like-countText {
+    position: absolute;
+    top:10%;
+    right: -4%;
+}
+
+.sharingbox {
+    height: 20%;
+}
+
+.sharingbox {
+    height: 20%;
+}
+
+.sharingbox-body {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sharingbox-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eeeeee;
+    align-items: center;
+    height: 3rem;
+}
+
+.custom-sharebtn {
+    background-color: transparent;
+}
+
+.closeSharingbox {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.custom-TGbtn {
+    background-color: white;
+    border: none;
+}
+
+.custom-TGbtn img {
+    width: 6rem;
+}
+
+.custom-Linkbtn {
+    background-color: white;
+    border: none;
+}
+
+.custom-Linkbtn img {
+    width: 6rem;
+}
+
+/* 全屏 offcanvas 样式 */
+.offcanvas-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-fullscreen.show {
+    transform: translateX(0);
+}
+
+.custom-iconbtn {
+    padding: 0;
+    display: flex;
+}
+
+.custom-Commenticonbtn {
+    margin-bottom: 0.2rem;
+}
+
+.icon-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.icon-header {
+    position: fixed;
+}
+
+.icon-close-button {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top:65%;
+    left: 50%;
+}
+
+.close-img {
+    position: absolute;
+    top:4%;
+    left:21%;
+    width: 2rem;
+}
+
+.off-author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.off-authorContainer {
+    display: flex;
+    flex-direction: row;
+    gap:1.5rem
+}
+
+.off-authorProfilePic {
+    width: 4.5rem; /* 调整图像的宽度 */
+    height: 4.5rem; /* 调整图像的高度 */
+    border-radius: 50%; /* 将图像裁剪成圆形 */
+    object-fit: initial; /* 保持图像的宽高比并填充容器 */
+}
+
+.off-authorTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.off-authorName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff1be;
+}
+
+.count-icon {
+    display: flex;
+    flex-direction: row;
+    background-color: #5b5b5b;
+    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.count-icon img {
+    width:auto;
+    height: 1rem;
+}
+
+.count-iconText {
+    font-size: 0.8rem;
+    color: #fff1be;
+}
+
+.off-authorIconImg {
+    width: 4rem;
+}
+
+.BNgrowth {
+    margin-top: 4rem;
+}
+
+.growth-title {
+    display: flex;
+    color: #fff1be;
+    font-weight:bold;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.growth-img {
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(3, 1fr); /* 每行三列，每列平均分配宽度 */
+    gap: 1rem; /* 设置图片之间的间隔 */
+  }
+  
+  .growth-imgs {
+    text-align: center; /* 文字居中 */
+  }
+  
+  .growth-imgs img {
+    width: 3rem; /* 设置图像的宽度 */
+    height: 3rem; /* 设置图像的高度 */
+    object-fit: initial;
+  }
+
+  .growth-imgTitle {
+    color: #fff1be;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .growth-imgText {
+    color: #bebebe;
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
+
+  .BNicon {
+    margin-top: 2rem;
+}
+
+.icon-imgs {
+    text-align: center; /* 文字居中 */
+  }
+  
+  .icon-imgs img {
+    width: 3.5rem; /* 设置图像的宽度 */
+    height: 5rem; /* 设置图像的高度 */
+    object-fit: initial;
+  }
+
+  .icon-imgTitle {
+    color: #fff1be;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+    white-space: nowrap;
+  }
+
+  .icon-title {
+    display: flex;
+    color: #fff1be;
+    font-weight:bold;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.icon-img {
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(3, 1fr); /* 每行三列，每列平均分配宽度 */
+    gap: 1rem; /* 设置图片之间的间隔 */
+  }
+
+  .order-btn {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right:2%;
+    margin-top: 0.5rem;
+  }
+
+  .order-btns {
+    background-color: transparent;
+    color: #bebebe;
+    border: transparent;
+  }
+
+  .order-btns:hover {
+    font-weight: bold;
+    color: #000000;
+  }
+
+
+  
+.EditHistory {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem auto;
+    font-style: italic;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: black;
+}
+
+.EditHistory span {
+    margin:0 0.5rem;
+}
+
+
+
+/* 其他有改動的部分 */
+
+.certification-icons2 {
+    color: #fff;
+    font-size: 10px;
+    width: 50px;
+    background-size: cover;
+    text-align: right;
+    margin-left: -20px;
+    padding-right: 10px;
+    position: relative;
+    top: 15px;
+}
+.certification-icons {
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+}
+
+.author-icon3{
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+}
+.author-icon4{
+    color: #fff;
+    font-size: 10px;
+    width: 50px;
+    background-size: cover;
+    text-align: right;
+    margin-left: -20px;
+    padding-right: 10px;
+    position: relative;
+    top: 15px;
+}

@@ -1,0 +1,1073 @@
+/*版面控制*/
+
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+.body-container {
+  font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #f7f7f7;
+    overflow-y:scroll ;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+        
+}
+
+#tab1 {
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+}
+
+.tab-nav {
+    display: flex;
+    position: fixed;
+    height:4rem;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+  }
+
+  .nav-item {
+    height: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .tab-link {
+    background-color:white;
+    color: gray;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    flex: 0 0 auto;
+    font-size: 1rem;
+    position: relative; /* 设置相对定位 */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .tab-link::after {
+    content: ''; /* 添加伪元素内容 */
+    position: absolute; /* 设置绝对定位 */
+    bottom: -0.1rem; /* 调整底线位置，离字体1rem距离 */
+    left: 30%;
+    height: 0.3rem; /* 底线的高度 */
+    width: 2rem; /* 设置边框宽度为0，以便自定义宽度 */
+    background-color: blue; /* 底线的颜色 */
+    border-radius: 3rem; /* 设置底线的圆角效果 */
+    visibility: hidden; /* 初始状态下隐藏伪元素 */
+  }
+
+  .tab-link:hover {
+    border: none;
+    color: black; /* 字体颜色变为黑色 */
+    font-weight: bold; /* 字体加粗 */
+    font-size: 20px;
+  }
+  
+
+  
+.tab-link:focus::after,
+.tab-link:active::after,
+.tab-link:hover::after { /* 添加:hover伪类来确保底线在悬停时不消失 */
+  visibility: visible; /* 当按钮获得焦点、被激活或悬停时显示伪元素 */
+}
+
+  
+  .tab-content-container {
+    height:100% ;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* 添加平滑滚动效果 */
+    white-space: nowrap;
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+  }
+  
+  .tab-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 0 0 100%;
+    color: black;
+    margin-top: 1rem;
+    overflow-x: hidden;
+  }
+
+  .tab-content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 0 0 100%;
+    color: black;
+    margin-top: 1rem;
+    overflow-x: hidden;
+  }
+
+.section {
+    display: flex;
+    flex-direction:row;
+    margin-top: 3rem;
+    width: 100%;
+    height: 6rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      width: 0px;
+      }
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    align-items: center;
+}
+
+.sections-title {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.sections img {
+    width: 3rem;
+    height:3rem;
+    border-radius: 50%; /* 将图片裁剪成圆形 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    z-index: 1;
+}
+
+.seen {
+    width: 2.2rem;
+    height: 1.2rem;
+    border: 2px solid #ffffff;
+    background-color: #3e3e3e;
+    color: #ffffff;
+    border-radius: 10px 0 10px 0;
+    margin-left: 1.3rem;
+    margin-top:-1rem;
+    z-index: 2;
+    font-size: 11px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15rem; /* 上面的高度较大，可根据需要调整 */
+    flex-direction: column;
+    align-items: center;
+    margin-top:0.3rem;
+    margin-left: 0;
+  }
+
+  .box-containerLink {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .box-containerLink:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .box-shadow {
+    width: 95%; /* 上面的宽度较大，可根据需要调整 */
+    height: 10rem; /* 上面的高度较大，可根据需要调整 */
+    background-color: #ffffff;
+    box-shadow: 0px 16px 20px rgba(146, 146, 146, 0.1);
+    z-index: 2;
+    border-radius: 0.8rem;
+  }
+  
+  .overlay {
+    width: 85%; /* 下面的宽度较小，可根据需要调整 */
+    height: 5rem; /* 下面的高度较小，可根据需要调整 */
+    background-color: #ffffff; /* 偏灰色 */
+    position: relative;
+    top: -4.2rem; /* 上下两个元素的垂直偏移量，可根据需要调整 */
+    z-index: 1;
+    opacity: 1;
+    border-radius: 0.8rem;
+
+  }
+
+  .column-left {
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+  }
+  
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .view {
+    color: gray;
+    font-size: 0.8rem;
+    margin-bottom:0.5rem;
+  }
+
+  .titles {
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+  }
+
+  .author {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction:row ;
+  }
+
+  .circle-image {
+    width: 2rem; /* 调整图像的宽度和高度根据需要 */
+    height: 2rem;
+    border-radius: 50%; /* 将边框半径设置为50%以创建圆形遮罩 */
+    overflow: hidden; /* 裁剪超出边界的部分 */
+}
+
+.circle-image img {
+    width: 100%; /* 图像宽度填满容器 */
+    height: 100%; /* 图像高度填满容器 */
+    object-fit: cover; /* 缩放图像以填充容器 */
+}
+
+.authors {
+  margin-left: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75%;
+  margin-top:-9.5rem ;
+}
+
+.refresh {
+  height:1rem;
+  width:1rem;
+  margin-left: 4rem;
+}
+
+.answer {
+  display: flex;
+  flex-direction:row ;
+  margin-top: 6rem;
+}
+
+.answers {
+  margin-left: 0.5rem;
+  margin-top: -0.2rem;
+  color: gray;
+}
+
+.main {
+  margin-top: -3.5rem;
+  width: 100%;
+  height: auto;
+  background-color: white; /* 主要区块的背景色为白色 */
+  padding: 0.5rem; /* 可根据需要调整内边距 */
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    width: 0px;
+    }
+}
+
+.main2 {
+  width: 100%;
+  height: auto;
+  background-color: white; /* 主要区块的背景色为白色 */
+  padding: 0.5rem; /* 可根据需要调整内边距 */
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    width: 0px;
+    }
+}
+
+
+#daily {
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+  overflow-x: hidden;
+}
+
+#advanced {
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+  overflow-x: hidden;
+}
+
+.order-New {
+  position: absolute;
+}
+
+.tab-button {
+  background-color:transparent ;
+  color: gray;
+  border: none;
+  border-radius: 2rem; /* 2rem 的圆角 */
+  padding: 10px 20px; /* 可根据需要调整按钮的内边距 */
+  margin: 5px; /* 可根据需要调整按钮之间的间距 */
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  color: black;
+  background-color: #dedede; /* 鼠标悬停时的底色变化 */
+  transition: background-color 0.3s ease; /* 添加背景颜色的过渡效果 */
+  font-size: 1.1rem;
+  border: none;
+}
+
+.tab-button:active {
+  background-color: transparent;
+  border: none;
+}
+
+#authorCon {
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 0.5rem;
+  padding: 1rem 0;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.articleContent {
+  display: flex;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  width: 98%;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+}
+
+
+.authorImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+.authorText {
+  padding: 0 10px;
+  /* 可以添加一些內間距 */
+}
+
+.authorTag {
+  width: 20px;
+  /* 調整圖片寬度 */
+  height: 20px;
+  /* 調整圖片高度 */
+}
+
+.authorName {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.authorIdentity {
+  font-size: 15px;
+  color: #bebebe;
+}
+
+.viewMore {
+  color: blue;
+}
+
+.shareCon button:nth-child(n+2) {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  border: none;
+}
+
+
+
+.shareCon button>img {
+  width: 20px;
+  height: 20px;
+}
+
+.discussion {
+  color: #666666;
+  border: none;
+  border-radius: 10px;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+
+}
+
+.articleContent span:nth-child(1) {
+  display: block;
+  max-height: 2.8em;
+  /* 两行文字的高度 */
+  line-height: 1.4em;
+  /* 单行文字的高度 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lastWord {
+  text-align: center;
+  color: gray;
+}
+
+.imgsCon {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  padding: 10px;
+}
+
+
+.imgsCons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*每行三列，宽度平均分配*/ grid-gap: 10px;
+  grid-row-gap: 10px;
+  /* 上下距离 */
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.imgsCon1 {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+
+.imgsCon2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.shareCon img {
+  display: inline !important;
+}
+
+.shareCon span {
+  font-size: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  color: gray;
+}
+
+
+.write-btn{
+  display:flex;
+  position: fixed;
+  z-index: 2000;
+  right: 0.5rem;
+  bottom: 6rem;
+}
+
+.write-header {
+  gap:5rem;
+}
+
+.type-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #dedede;
+}
+
+/*Tab2*/
+
+.switch {
+  background-color: #e6e6e6;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 2.5rem;
+  margin:2rem auto 0;
+}
+
+.place-icon {
+  height: 1.5rem;
+}
+
+.place {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4rem;
+  color: #ababab;
+  gap: 0.5rem;
+}
+
+.pbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.pbuttons {
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.pbuttons img {
+  border-radius: 2rem;
+  width: 5rem; /* 设置固定宽度 */
+  height: 3rem; /* 设置固定高度 */
+}
+
+.tg-btn {
+  color:black;
+  text-decoration: none;
+}
+
+.tg-btn:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.country-btn {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.country-btnTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.btns-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x:scroll;
+  &::-webkit-scrollbar{
+    width: 0px;
+    }
+}
+
+.country-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.country-btns img {
+  width: 3.5rem; /* 设置固定宽度和高度 */
+  height: 3.5rem;
+  border-radius: 50%; /* 将图像的边框半径设置为50%，即变成圆形 */
+  object-fit: initial; /* 移除 object-fit 样式，使图像恢复原始大小 */
+}
+
+.country-btnsTitle {
+  font-size: 0.8rem;
+}
+
+
+
+/* Modal 内容的样式 */
+.modal-fullscreen {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.modal-img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.article {
+  height:35rem;
+}
+
+.custom-input-group {
+  background-color: transparent;
+  border:none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hot {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin: 0.5rem 1rem;
+}
+
+.footer-object {
+    position: fixed;
+    bottom: -2rem;
+    left: 0;
+    width: 100%;
+    height: 100px; /* 请根据您的需求调整高度 */
+    z-index: 100;
+}
+
+.profile-missionContainer {
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-link{
+  color:#aeaeae;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: black;
+  font-weight: bold;
+  background-color: #eeeeee;
+  border-radius: 2rem;
+}
+
+.profile-mission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid #eeeeee;
+  padding: 1rem 0; /* 增加底部内边距 */
+}
+
+.profile-missionTabContainer {
+  margin: 1rem 0;
+}
+
+.profile-mission img {
+  width: auto;
+  height: 3rem;
+}
+
+
+.profile-missionAward {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:absolute;
+  margin-top: -2.2rem;
+  margin-left: 13rem;
+}
+
+.profile-missionAwardText {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.profile-missionAward  img{
+  width: auto;
+  height:1rem;
+}
+
+.profile-missionText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-missionTextTitle {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.profile-missionTextTitle2 {
+  color: #aeaeae;
+  font-size: 0.8rem;
+}
+
+.profile-missionLeft {
+  gap:0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-missionBTN {
+  background-color: #fcd23a;
+  position: relative;
+  margin-top: 1.8rem;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  padding:0.1rem 0.5rem;
+  width:4rem;
+}
+
+.profile-missionBTNDone {
+  background-color: #eeeeee;
+  color: #bebebe;
+  position: relative;
+  margin-top: 1.8rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  padding:0.1rem 0.5rem;
+  width:4rem;
+}
+
+.profile-missiontimes {
+  position: relative;
+  margin-top: -0.5rem;
+  color: #bebebe;
+  font-size: 0.8rem;
+}
+
+.profile-missionAwardTab2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:absolute;
+  margin-top: -3.8rem;
+  margin-left: 13rem;
+}
+
+.profile-missionAwardTab2  img{
+  width: auto;
+  height:1rem;
+}
+
+.offcanvas-fullscreen {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-fullscreen.show {
+  transform: translateX(0);
+}
+
+.btn {
+  border: none;
+  padding: 0;
+}
+
+.custom-backbtn {
+  margin: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.custom-backbtn img {
+  width: 2rem;
+  height: auto;
+}
+
+.custom-ArticleNav {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.closeSharingbox {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sharingbox {
+  height: 20%;
+  z-index: 10000;
+  background-color: #eeeeee;
+}
+
+.closeSharingbox {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sharingbox-body {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sharingbox-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eeeeee;
+  align-items: center;
+  height: 3rem;
+  border-top: 1px solid #bebebe;
+}
+
+.custom-TGbtn {
+  background-color: white;
+  border: none;
+}
+
+.custom-Linkbtn {
+  background-color: white;
+  border: none;
+}
+
+.share-img {
+  width: auto;
+  height: 100%;
+}
+
+.custom-Commenticonbtn {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, rgb(217, 222, 141), rgb(198, 136, 27));
+  border-radius: 2rem;
+  height: 1.2rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.custom-Commenticonbtn img {
+  width: auto;
+  height: 2rem;
+  margin-left: -1rem;
+}
+
+.icon-level {
+  color: white;
+  font-size: 0.8rem;
+  margin:0 0.5rem;
+}
+
+.icon-title {
+  display: flex;
+  color: #fff1be;
+  font-weight:bold;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.icon-header {
+  position: fixed;
+}
+
+.icon-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.icon-close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top:65%;
+  left: 50%;
+}
+
+.close-img {
+  position: absolute;
+  top:4%;
+  left:21%;
+  width: 2rem;
+}
+
+.off-author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.off-authorContainer {
+  display: flex;
+  flex-direction: row;
+  gap:1.5rem
+}
+
+.off-authorProfilePic {
+  width: 4.5rem; /* 调整图像的宽度 */
+  height: 4.5rem; /* 调整图像的高度 */
+  border-radius: 50%; /* 将图像裁剪成圆形 */
+  object-fit: initial; /* 保持图像的宽高比并填充容器 */
+}
+
+.off-authorTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.off-authorName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff1be;
+}
+
+.count-icon {
+  display: flex;
+  flex-direction: row;
+  background-color: #5b5b5b;
+  border-radius: 2rem;
+  padding: 0.2rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.count-icon img {
+  width:auto;
+  height: 1rem;
+}
+
+.count-iconText {
+  font-size: 0.8rem;
+  color: #fff1be;
+}
+
+.off-authorIconImg {
+  width: 4rem;
+}
+
+.BNgrowth {
+  margin-top: 4rem;
+}
+
+.growth-title {
+  display: flex;
+  color: #fff1be;
+  font-weight:bold;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.growth-img {
+  display: grid; /* 使用 Grid 布局 */
+  grid-template-columns: repeat(3, 1fr); /* 每行三列，每列平均分配宽度 */
+  gap: 1rem; /* 设置图片之间的间隔 */
+}
+
+.growth-imgs {
+  text-align: center; /* 文字居中 */
+}
+
+.growth-imgs img {
+  width: 3rem; /* 设置图像的宽度 */
+  height: 3rem; /* 设置图像的高度 */
+  object-fit: initial;
+}
+
+.growth-imgTitle {
+  color: #fff1be;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.growth-imgText {
+  color: #bebebe;
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+
+.BNicon {
+  margin-top: 2rem;
+}
+
+.icon-imgs {
+  text-align: center; /* 文字居中 */
+}
+
+.icon-imgs img {
+  width: 3.5rem; /* 设置图像的宽度 */
+  height: 5rem; /* 设置图像的高度 */
+  object-fit: initial;
+}
+
+.icon-imgTitle {
+  color: #fff1be;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  white-space: nowrap;
+}
+
+.offcanvas-fullscreen2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-img {
+  display: grid; /* 使用 Grid 布局 */
+  grid-template-columns: repeat(3, 1fr); /* 每行三列，每列平均分配宽度 */
+  gap: 1rem; /* 设置图片之间的间隔 */
+}
+
+.authorContainer {
+  margin:-0.5rem 1rem;
+}

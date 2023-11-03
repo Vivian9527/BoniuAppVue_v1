@@ -1,0 +1,1345 @@
+body,
+html {
+  background-color: white;
+}
+
+/* .blank {
+    width: 100%;
+} */
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Ensure navbar is on top */
+  background-color: white;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.content-container {
+  position: fixed;
+  top: 146px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 144px -65px);
+  background-color: #f8f9fa;
+  border: 1px solid #d1d3e2;
+  padding: 20px;
+}
+
+.body-container {
+  position: fixed;
+  /* Fixed position from top */
+  left: 0;
+  width: 100%;
+  height: calc(
+    100vh
+  ); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+  /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+  background-color: #ffffff;
+  border: 1px solid #d1d3e2;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+/*導覽列*/
+
+#searchDiv {
+  position: relative;
+  display: inline-block;
+}
+
+#searchDiv img {
+  position: absolute;
+  left: 12px;
+  top: calc(50% - 0.5em);
+}
+
+#searchDiv input {
+  text-indent: 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+#narbarText {
+  height: 30px;
+  /*    background-color:red;*/
+}
+
+/*頁尾*/
+
+#footerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px 0 15px;
+  text-align: center;
+}
+
+.footerIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.footerText {
+  margin-top: 4px;
+  /* 調整文字和圖標之間的間距 */
+  /* 調整文字的樣式 */
+  color: #9d9d9d;
+  size: 10px;
+}
+
+/*推薦頁面*/
+
+/*輪播圖*/
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+  /*padding:10px;*/
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mySlides img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.dots {
+  position: relative;
+  top: -30px;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: rgba(187, 187, 187, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+#jobText {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#jobbt {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  /* 文字顏色 */
+  border: none;
+  /* 去掉邊框 */
+  font-size: 15px;
+}
+
+#adFollowCon {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 1% 6%;
+}
+
+#adfollow {
+  max-width: 100%;
+  max-height: 100%;
+  /* 最大高度相对于容器高度 */
+  display: block;
+  margin: 0 auto;
+  /* 居中图像 */
+}
+
+#adfollowcancel {
+  position: relative;
+  left: 93%;
+  bottom: -30px;
+  width: 20px;
+  height: 20px;
+}
+
+#adHr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*主要內容*/
+#indexAuthorCon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.articleContent {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+}
+
+.authorImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+.authorText {
+  padding: 0 10px;
+  /* 可以添加一些內間距 */
+}
+
+.authorTag {
+  width: 35px;
+  height: 35px;
+  z-index: 1;
+}
+
+.authorName {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.authorIdentity {
+  font-size: 15px;
+  color: gray;
+}
+
+.viewMore {
+  color: blue;
+}
+
+.shareCon button:nth-child(n + 2) {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  border: none;
+}
+
+.shareCon button > img {
+  width: 20px;
+  height: 20px;
+}
+
+.discussion {
+  color: #666666;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+}
+
+.articleContent span:nth-child(1) {
+  /* display: block; */
+  max-height: 2.8em;
+  /* 两行文字的高度 */
+  line-height: 1.4em;
+  /* 单行文字的高度 */
+  /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+.lastWord {
+  text-align: center;
+  color: gray;
+}
+
+.imgsCon {
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  padding: 10px;
+}
+
+.imgsConsCss {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-row-gap: 10px;
+  /* 上下距离 */
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.imgsCon1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.imgsCon2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.albumGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 三列 */
+  grid-gap: 10px;
+  /* 可根据需要设置间距 */
+}
+
+.albumDivGrandson {
+  width: 100%;
+  /* 充满父容器 */
+  height: 0;
+  padding-bottom: 100%;
+  /* 1:1 比例，可根据需要调整 */
+  position: relative;
+  overflow: hidden;
+}
+
+.albumDivGrandson1 {
+  width: 100%;
+  /* 充满父容器 */
+  height: 0;
+  padding-bottom: 100%;
+  /* 1:1 比例，可根据需要调整 */
+  position: relative;
+  overflow: hidden;
+}
+
+.albumDivGrandson img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 裁剪以适应 */
+  border-radius: 10%;
+}
+
+.albumDivGrandson1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 裁剪以适应 */
+  border-radius: 10%;
+}
+
+.shareCon img {
+  display: inline !important;
+}
+
+.shareCon span {
+  font-size: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  color: gray;
+}
+
+.jobTagContainer {
+  background-color: #e2e2e2;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 2px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-left: 15px;
+  white-space: nowrap;
+  margin-top: 6px;
+}
+
+.jobTag img {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.BigjobTagContainer {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  max-height: 60px;
+  /* 设置最大高度，适当调整高度值 */
+  overflow: hidden;
+  /* 超出部分隐藏 */
+}
+
+.jobDivSon1 {
+  width: 100%;
+  overflow: auto;
+  /* 隐藏外部容器的溢出内容 */
+}
+
+/* .jobDivSon2 {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+} */
+
+.lastWord {
+  margin-bottom: 15%;
+}
+
+/* 點擊放大圖片的css */
+/* 隐藏全屏图像和背景遮罩 */
+.fullscreen-image {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* 半透明黑色背景 */
+  z-index: 1003;
+  text-align: center;
+}
+
+.fullscreen-image img {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.authorLevel {
+  color: #fff;
+  font-size: 10px;
+  width: 50px;
+  background-size: cover;
+  text-align: right;
+  margin-left: -20px;
+  padding-right: 10px;
+}
+
+/*資訊頁面*/
+
+.newsCon {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px gray solid;
+}
+
+.newsConLeft {
+  height: 80px;
+  width: 70%;
+}
+
+.newsConRight {
+  height: 80px;
+  width: 30%;
+}
+
+.newstag {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -2%;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  bottom: -25px;
+}
+
+.newstag span:nth-child(1) {
+  color: gray;
+}
+
+.newstag span:nth-child(2) {
+  color: red;
+  border: 1px red solid;
+}
+
+.newsConRight {
+  display: flex;
+  justify-content: center;
+}
+
+.newsConRight img {
+  object-fit: cover;
+  /* 图片保持纵横比，完整显示在容器内 */
+  width: 100px;
+  /* 你希望的正方形大小 */
+  height: 80px;
+  /* 你希望的正方形大小 */
+}
+
+.newsAdCon {
+  padding: 10px;
+  border-bottom: 1px #d0d0d0 solid;
+  margin-bottom: 30px;
+}
+
+.newsAdImgCon {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.newsAdImgCon img {
+  border-radius: 10px;
+  max-width: 100%;
+  /* 图像最大宽度为容器宽度 */
+  max-height: 100%;
+  /* 图像最大高度为容器高度 */
+  width: auto;
+  height: auto;
+}
+
+.newsAdTextCon2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.newsAdTextCon2 span:nth-child(1) {
+  color: gray;
+}
+
+.newsAdTextCon2 button {
+  color: white;
+  background-color: gray;
+}
+
+.loadingCon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30%;
+}
+
+.loadingCon span {
+  color: gray;
+  margin-left: 10px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: blue transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.adlink {
+  text-decoration: none;
+  /* 移除下划线 */
+  color: inherit;
+  /* 保持原有颜色 */
+  /* 添加其他样式，如背景颜色等 */
+}
+
+.adlink:hover {
+  text-decoration: none;
+  /* 移除下划线 */
+  color: inherit;
+  /* 保持原有颜色 */
+  /* 添加其他样式，如背景颜色等 */
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*精選頁面*/
+#page4 {
+  padding: 0 3%;
+}
+
+.SelectedCon {
+  width: auto;
+  height: 200px;
+  background: linear-gradient(to bottom, #cccccc, #888888);
+  position: relative;
+}
+
+.SelectedCon:not(:first-child) {
+  margin-top: 3%;
+}
+
+.SelectedText {
+  position: relative;
+  top: 60%;
+  left: 2%;
+}
+
+.SelectedText div:nth-child(1) {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.SelectedText div:nth-child(2) {
+  color: white;
+  font-size: 15px;
+}
+
+/*本地頁面*/
+
+#page4 {
+  padding: 5px;
+}
+
+.localConBodyNews {
+  height: 500px;
+  width: 100%;
+  margin-top: 10px;
+
+  /* display: flex;
+    justify-content: center; 
+    align-items: center;  */
+}
+
+.localConBodyNewsPic,
+.localConBodyForumPic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.localConBodyNewsPic img,
+.localConBodyForumPic img {
+  width: 200px;
+  height: 200px;
+}
+
+#localConBodyNewsText,
+#localConBodyForumText {
+  color: gray;
+  font-size: 25px;
+}
+
+.localConBodyForum {
+  border-bottom: 1px gray solid;
+  margin-top: 30px;
+  padding: 3%;
+}
+
+.localConHead {
+  font-size: 10px;
+}
+
+.localHeadIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.localConHead1bt {
+  background-color: #f0f0f0;
+  color: gray;
+  border-radius: 2px;
+  border: none;
+  padding: 8px;
+}
+
+#localConHead1 button:nth-child(2) {
+  margin-left: 5px;
+}
+
+#DefaultLocation {
+  color: gray;
+  background-color: transparent;
+  border: none;
+}
+
+.localConHead1ActiveBt {
+  background-color: #ceceff;
+  color: #0000e3;
+  border-radius: 2px;
+  border: none;
+  padding: 8px;
+}
+
+#SwitchLocation {
+  color: orange;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+}
+
+#localConBodyForum {
+  margin-top: 10px;
+  width: auto;
+}
+
+.forumHeadPic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.localConBodyForum1 {
+  display: flex;
+  align-items: center;
+  /* 垂直居中对齐 */
+  justify-content: center;
+}
+
+.ForumCon1 {
+  display: flex;
+  align-items: center;
+  /* 垂直居中对齐 */
+  justify-content: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+  /* 将 "置顶" 靠右对齐 */
+  font-size: 10px;
+  color: red;
+  border: 1px red solid;
+}
+
+.forumHeadName {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.ForumCon2 div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 用省略号表示溢出部分 */
+  max-width: 100%;
+  /* 限制文本容器的最大宽度 */
+}
+
+.ForumCon2 span {
+  color: blue;
+}
+
+.ForumCon2 a div {
+  color: black;
+}
+
+.divNone {
+  display: none;
+}
+
+.locationSelectDiv {
+  text-align: center;
+  overflow-y: auto;
+  max-height: 20vh;
+  font-size: 20px;
+}
+
+.locationSelectBts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.locationSelectBts button {
+  background-color: transparent;
+  color: #0066cc;
+  border: none;
+}
+
+.locationSelectBts span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.locationSelectBorder {
+  border-top: 1px gray solid;
+  border-bottom: 1px gray solid;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  z-index: 1002;
+}
+
+#locationChangeDiv {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+/* 遮罩层样式 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 半透明灰色 */
+  z-index: 1001;
+  /* 设置合适的 z-index 值 */
+  display: none;
+  /* 初始时不显示遮罩层 */
+}
+
+.spanTop {
+  color: red;
+  border: 1px red solid;
+  margin-left: 60%;
+  font-size: 10px;
+}
+
+/* 商務頁面 */
+#businessSliderDot .slick-dots {
+  border-bottom: #888888 1px solid;
+}
+
+.newsCon2 {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px #888888 solid;
+}
+
+/* 關注頁面 */
+
+.newsConLeft2 {
+  height: 80px;
+  width: 100%;
+}
+
+.newsConRight2 {
+  height: 80px;
+  width: 0%;
+}
+
+.focusConHead1bt {
+  background-color: #f0f0f0;
+  color: gray;
+  border-radius: 2px;
+  border: none;
+  padding: 8px;
+}
+
+.focusConBodyForum {
+  border-bottom: 1px gray solid;
+  margin-top: 30px;
+  padding: 3%;
+}
+
+.focusConHead1ActiveBt {
+  background-color: #ceceff;
+  color: #0000e3;
+  border-radius: 2px;
+  border: none;
+  padding: 8px;
+}
+
+.focusConBodyNewsText {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.focusConBodyNewsText div:nth-child(1) {
+  color: black;
+  font-size: 20px;
+}
+
+.focusConBodyNewsText div:nth-child(2) {
+  color: gray;
+  font-size: 18px;
+}
+
+.focusConBodyNewsPic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.focusConBodyNewsPic img {
+  width: 200px;
+  height: 150px;
+}
+
+#focusConBodyNews {
+  padding: 20px;
+}
+
+#focusConBodyForum {
+  padding: 20px;
+}
+
+/* .localConBodyNews1 {
+    margin-top: 25%;
+    margin-bottom: 25%;
+} */
+
+.focusRecommend {
+  border-bottom: #d0d0d0 1px solid;
+  padding: 5%;
+  margin-bottom: 30px;
+}
+
+/* .goodArticleRecommend {
+    border-bottom: gray 1px solid;
+    padding: 5%;
+} */
+
+.focusRecommendTitleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.focusRecommendTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#focusForumHaveContent a {
+  text-decoration: none;
+}
+
+.focusRecommendChange img {
+  height: 25px;
+  width: 25px;
+}
+
+.focusRecommendChange span {
+  color: gray;
+  font-size: 15px;
+}
+
+.focusRecommendChange {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.focusRecommendCardPic img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: inline !important;
+}
+
+.focusRecommendCard {
+  background-color: #eeeded;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 水平居中 */
+  text-align: center;
+  /* 文本水平居中 */
+  padding: 15px;
+  margin: 3px;
+}
+
+.focusRecommendCard div:nth-child(2) {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  margin-top: 5px;
+}
+
+.focusRecommendCard div:nth-child(3) {
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+  margin-top: 5px;
+}
+
+.focusRecommendCard div:nth-child(4) button {
+  font-size: 12px;
+  color: white;
+  background-color: #0000ff;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: none;
+}
+
+.focusRecommendCard div:nth-child(4) button.focusButtonClicked {
+  font-size: 12px;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: rgb(152, 152, 152);
+  background-color: #c5c4c4;
+}
+
+/* 論壇分享按鈕區塊 */
+#forumShareCon {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1003;
+  background-color: #e0e0e0;
+  height: 200px;
+}
+
+#forumShareButton {
+  display: flex;
+  justify-content: left;
+  padding: 10% 0;
+}
+
+#forumShareCancelButton {
+  border-top: #666666 1px solid;
+  text-align: center;
+  height: 30%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+#forumCopyCon {
+  display: flex;
+  flex-direction: column;
+  /* 上下排列 */
+  align-items: center;
+  /* 水平居中对齐 */
+  text-align: center;
+  /* 文字水平居中对齐 */
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+#forumTelegramCon {
+  display: flex;
+  flex-direction: column;
+  /* 上下排列 */
+  align-items: center;
+  /* 水平居中对齐 */
+  text-align: center;
+  /* 文字水平居中对齐 */
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+#forumCopyCon span {
+  margin-top: 10px;
+}
+
+#forumTelegramCon span {
+  margin-top: 10px;
+}
+
+#tgBt {
+  width: 50px;
+  /* 按钮宽度 */
+  height: 50px;
+  /* 按钮高度 */
+  border: none;
+  /* 去除边框 */
+  cursor: pointer;
+  /* 鼠标样式为手型 */
+}
+
+#forumTelegramCon {
+  color: black;
+}
+
+.tglink:hover {
+  text-decoration: none;
+}
+
+#tgBt img,
+#copyBt img {
+  width: 50px;
+  /* 按钮宽度 */
+  height: 50px;
+  /* 按钮高度 */
+}
+
+#copyBt {
+  width: 50px;
+  /* 按钮宽度 */
+  height: 50px;
+  /* 按钮高度 */
+  border: none;
+  /* 去除边框 */
+  cursor: pointer;
+  /* 鼠标样式为手型 */
+}
+
+/* 複製連結提示框 */
+/* 调整模态框位置 */
+#copyDiv {
+  font-size: 15px;
+  position: relative;
+  top: 70%;
+  left: 35%;
+  width: fit-content;
+}
+
+/* 移除背景遮罩 */
+.modal-backdrop {
+  display: none;
+}
+
+/* 好帖分享 */
+
+.goodArticlePic {
+  display: flex;
+  /* 使用flex布局 */
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+  width: 100%;
+  /* 容器的宽度 */
+  height: 150px;
+  /* 容器的高度 */
+  overflow: hidden;
+  /* 隐藏溢出的部分 */
+}
+
+.goodArticlePic img {
+  width: 100%;
+  /* 图片宽度100%，填满容器 */
+  height: 100%;
+  /* 图片高度100%，填满容器 */
+  object-fit: cover;
+  /* 保持纵横比，填满容器 */
+}
+
+.goodArticleRecommend {
+  border-bottom: #d0d0d0 1px solid;
+  padding: 5%;
+  margin-bottom: 30px;
+}
+
+.goodArticleTitle {
+  width: 100%;
+  /* 禁止文字换行 */
+  overflow: hidden;
+  /* 隐藏超出容器的文字 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
+}
+
+.goodArticleTitle p {
+  margin: 0;
+  /* 去除段落的默认外边距 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* 限制最大行数为2 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* 隐藏超出两行的文字 */
+  font-weight: bold;
+}
+
+.goodArticlePicCard {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 水平居中 */
+  text-align: center;
+  /* 文本水平居中 */
+  padding: 15px;
+  margin: 3px;
+}
+
+/* 在你的CSS樣式表中 */
+.newsLink {
+  text-decoration: none;
+  /* 取消下劃線 */
+  color: #333;
+  /* 設置文字顏色 */
+  /* 添加其他樣式，如字體大小、粗體等 */
+}
+
+/* 測試分頁內容 */
+#showTest {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /* 半透明灰色 */
+  z-index: 1001;
+  /* 设置合适的 z-index 值 */
+  display: none;
+  /* 初始时不显示遮罩层 */
+  overflow: auto;
+}
+
+/* 精選文章內頁 */
+#pageHead {
+  background-color: gray;
+}
+
+#backIndexBt {
+  color: aliceblue;
+}
+
+#pageHeadTitle {
+  padding: 30px;
+}
+
+#pageHeadTitle1 {
+  color: aliceblue;
+  font-size: 30px;
+}
+
+#pageHeadTitle2 {
+  color: aliceblue;
+  font-size: 15px;
+}
+
+/* .articleTextCon{
+
+} */
+.articleCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px gray solid;
+  padding: 10px;
+}
+
+.articleTextCon {
+  width: 80%;
+}
+
+.articleCover {
+  width: 10%;
+  height: 80px;
+}
+
+.articleCover img {
+  object-fit: cover;
+  width: 100px;
+  height: 80px;
+}
+
+.articleTitle {
+  font-size: 20px;
+  color: black;
+}
+
+.articleDiscussion {
+  position: relative;
+  bottom: -25px;
+  margin-top: 10px;
+  font-size: 10px;
+  color: gray;
+}
+
+.lastWord {
+  text-align: center;
+  color: gray;
+}
+
+/* offcanva的設定 */
+
+.offcanvas-end {
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+}

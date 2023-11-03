@@ -1,0 +1,167 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    position: fixed;
+    /* Fixed position from top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    border: 1px solid #d1d3e2;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 90vh; /* 设置一个固定的高度，使得内容超过该高度时会出现滚动条 */
+    width: 98%;
+
+    /*滾動條樣式清除*/
+    &::-webkit-scrollbar{
+        width: 0px;
+        }
+}
+
+.backButton {
+    position: absolute;
+    /*
+     position: absolute; 是一种 CSS 定位属性，它允许你将一个元素相对于其最近的已定位（非 static）的祖先元素进行定位。
+     这意味着你可以根据祖先元素的位置来放置该元素，而不会影响其他页面元素的布局。
+
+     当你使用 position: absolute; 时，通常需要同时指定 top、right、bottom 或 left 属性来确定元素的确切位置。
+     这些属性用于指定元素相对于其包含块（最近的已定位祖先元素或 <body>）的位置。具体来说：
+     。top：定义元素的顶部边缘相对于包含块顶部边缘的距离。
+     。right：定义元素的右侧边缘相对于包含块右侧边缘的距离。
+     。bottom：定义元素的底部边缘相对于包含块底部边缘的距离。
+     。left：定义元素的左侧边缘相对于包含块左侧边缘的距离。
+     使用 position: absolute; 可以创建层叠布局，使元素可以重叠在其他元素之上。
+     这对于创建定位元素、弹出菜单、模态框等常见 UI 元素非常有用。但请注意，如果不正确使用，它可能会破坏页面布局，所以需要谨慎使用。
+    */
+    top: 10px; /* 距离顶部的距离 */
+    right: 30px; /* 距离右侧的距离 */
+    color: gray;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.block {
+    background-color:none;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    height: 50px;
+    color:#000000;
+    font-size: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.radio-button, .checkbox-button {
+    background-color: #f8f8f8;
+    color: gray;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.radio-button:hover, .checkbox-button:hover {
+    background-color: rgb(105, 123, 226,0.5);
+    color: blue;
+    border-radius: 10px;
+}
+
+/* 单选按钮样式 */
+
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+    background-color:  rgb(105, 123, 226,0.5);
+    color: blue;
+}
+
+/* .selected{
+    background-color:  rgb(105, 123, 226,0.5);
+    color: blue;
+} */
+
+/*footer*/
+
+footer {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    bottom: 0;
+    position: fixed;
+    width: 95%;
+    height: 3rem;
+    border: transparent;
+}
+
+button#clearButton {
+    width: 120px; /* 设置清除按钮的宽度，你可以根据需要调整这个值 */
+    display: inline-block;
+    background: none;
+    border: 1px solid blue;
+    color: blue;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+
+button#confirmButton {
+    width: calc(90% - 120px); /* 设置确定按钮的宽度，减去清除按钮的宽度，确保按钮总宽度不超过50% */
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 10px;
+    font-size: 19px;
+}

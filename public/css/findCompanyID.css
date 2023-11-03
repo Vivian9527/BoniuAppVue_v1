@@ -1,0 +1,164 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+  
+  
+.body-container {
+    position: fixed;
+    /* Fixed position from top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh); /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color: #ffffff;
+    border: 1px solid #d1d3e2;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.head {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    z-index: 100;
+}
+
+.back:hover {
+    text-decoration: none; /* 悬停时也移除底线 */
+}
+
+.back {
+    text-decoration: none; 
+    color: inherit;
+    font-size: 1.5rem;
+    margin-right: calc(2%);
+}
+
+.searchbar {
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+    margin-left: 0.35rem;
+    width: 95%;
+    height: 2.5rem;
+    z-index: 100;
+    display: flex; /* 使用 flex 布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.searchbar input {
+    border: none; /* 去掉边框 */
+    outline: none; /* 去掉聚焦时的外边框 */
+    background: transparent; /* 设置背景为透明 */
+    font-size: 1rem;
+    color: black; /* 将字体颜色设置为黑色 */
+    width: 95%;
+    margin-left: 0.5rem; /* 调整左边距，使文本居中 */
+}
+
+.searchbar input::placeholder {
+    text-align: start; /* 将placeholder文本居中 */
+}
+
+.searchbar input:focus {
+    caret-color: blue; /* 设置光标颜色为蓝色 */
+}
+
+.clear {
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1rem;
+    text-align: center; /* 将placeholder文本居中 */
+    background-color: #cecece;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; /* 垂直居中对齐 */
+    justify-content: space-evenly; /* 水平居中对齐 */
+    padding: 0; /* 去掉按钮的内边距 */
+}
+
+.clear:hover {
+    outline: none; /*移除btn輪廓線*/
+    background-color: #bebebe;
+}
+
+.searchHistory {
+    width: 100%;
+    height: 2rem;
+    background-color: none;
+    margin-top:4.5rem;
+    display: flex;
+    margin-left: calc(2%);
+}
+
+.searchHistorys {
+    width:50%;
+    display: flex;
+    align-items: center;
+}
+
+.clearHistory {
+    width: 50%;
+    background-color: transparent;
+    color: #aeaeae;
+    border:none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: calc(5%);
+    align-items: center;
+}
+
+.clearHistory:hover {
+    outline: none;
+}
+
+.data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.datas {
+    background-color: #bebebe;
+    border: none;
+    color: black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    white-space: nowrap; /* 防止文本换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 如果文本过长，显示省略号 */
+    font-size: 0.8rem;
+}
+
+.datas:hover {
+    outline: none;
+}

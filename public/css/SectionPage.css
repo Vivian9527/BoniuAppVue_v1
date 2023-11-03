@@ -1,0 +1,477 @@
+.body-container {
+    font-family: "Microsoft JhengHei", sans-serif;
+      position: absolute;
+      /* Fixed position from top */
+      width: calc(100%);
+      height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+      /*
+          原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+          - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+          - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+          综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+      */
+      background-color:#eeeeee;
+      overflow-y:scroll ;
+      &::-webkit-scrollbar{
+          width: 0px;
+          }
+  }
+
+.SectionHeader {
+    display: flex;
+    flex-direction: row;
+    background-color:#919191;
+    height: 12rem;
+    width: 100%;
+    align-items: center;
+    padding: 4rem 2rem 0 2rem;
+    justify-content: space-between;
+}
+
+.HeaderIcon {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: -1rem;
+    height: 4rem;
+    width: 97%;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.custom-backbtn {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+.custom-backbtn img {
+    width: 2rem;
+    height: auto;
+}
+
+.SectionHeaderImg {
+    width: auto;
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.SetionHeaderTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+    margin-left: 5rem;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.SectionHeaderModerator {
+    display:flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.SectionHeaderModeratorImg:not(:first-child) {
+    width: auto;
+    height: 1.5rem;
+    margin-left: -0.8rem;
+    border-radius: 50%;
+    object-fit: initial;
+}
+
+.SectionSubscribeBTN {
+    display: flex;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+    color: blue;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-missionContainer {
+    background-color: white;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-link{
+    color:#aeaeae;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.profile-mission {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #eeeeee;
+    padding: 1rem 0; /* 增加底部内边距 */
+}
+
+.profile-missionTabContainer {
+    margin: 1rem 0;
+}
+
+.profile-mission img {
+    width: auto;
+    height: 3rem;
+}
+
+
+.profile-missionAward {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:absolute;
+    margin-top: -2.2rem;
+    margin-left: 13rem;
+}
+
+.profile-missionAwardText {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.profile-missionAward  img{
+    width: auto;
+    height:1rem;
+}
+
+.profile-missionText {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-missionTextTitle {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.profile-missionTextTitle2 {
+    color: #aeaeae;
+    font-size: 0.8rem;
+}
+
+.profile-missionLeft {
+    gap:0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-missionBTN {
+    background-color: #fcd23a;
+    position: relative;
+    margin-top: 1.8rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    padding:0.1rem 0.5rem;
+    width:4rem;
+}
+
+.profile-missionBTNDone {
+    background-color: #eeeeee;
+    color: #bebebe;
+    position: relative;
+    margin-top: 1.8rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    padding:0.1rem 0.5rem;
+    width:4rem;
+}
+
+.profile-missiontimes {
+    position: relative;
+    margin-top: -0.5rem;
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.profile-missionAwardTab2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:absolute;
+    margin-top: -3.8rem;
+    margin-left: 13rem;
+}
+
+.profile-missionAwardTab2  img{
+    width: auto;
+    height:1rem;
+}
+
+#authorCon {
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+  }
+  
+  .authorInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .authorImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+  
+  .authorText {
+    padding: 0 10px;
+    /* 可以添加一些內間距 */
+  }
+  
+  .authorTag {
+    width: 20px;
+    /* 調整圖片寬度 */
+    height: 20px;
+    /* 調整圖片高度 */
+  }
+  
+  .authorName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .authorIdentity {
+    font-size: 15px;
+    color: #bebebe;
+  }
+  
+  .viewMore {
+    color: blue;
+  }
+  
+  .shareCon button:nth-child(n+2) {
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+    border: none;
+  }
+  
+  
+  
+  .shareCon button>img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .discussion {
+    color: #666666;
+    border: none;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+  
+  }
+
+  
+.articleContent span:nth-child(1) {
+    display: block;
+    max-height: 2.8em;
+    /* 两行文字的高度 */
+    line-height: 1.4em;
+    /* 单行文字的高度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .lastWord {
+    text-align: center;
+    color: gray;
+  }
+  
+  .imgsCon {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 10px;
+  }
+  
+  
+  .imgsCons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*每行三列，宽度平均分配*/ grid-gap: 10px;
+    grid-row-gap: 10px;
+    /* 上下距离 */
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .imgsCon1 {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  
+  
+  .imgsCon2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  .shareCon img {
+    display: inline !important;
+  }
+  
+  .shareCon span {
+    font-size: 10px;
+  }
+
+  .custom-Commenticonbtn {
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, rgb(217, 222, 141), rgb(198, 136, 27));
+    border-radius: 2rem;
+    height: 1.2rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+  
+  .custom-Commenticonbtn img {
+    width: auto;
+    height: 2rem;
+    margin-left: -1rem;
+  }
+  
+  .icon-level {
+    color: white;
+    font-size: 0.8rem;
+    margin:0 0.5rem;
+  }
+
+  .SectionPage {
+    text-decoration: none;
+  }
+
+  .articleContent {
+    display: flex;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    width: 98%;
+  }
+
+  
+.nav-link{
+    color:#aeaeae;
+  }
+  
+  .nav-link:focus, .nav-link:hover {
+    color: black;
+    font-weight: bold;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+  }
+
+  .sharingbox {
+    height: 20%;
+    z-index: 10000;
+    background-color: #eeeeee;
+  }
+
+  .closeSharingbox {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .sharingbox-body {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .sharingbox-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eeeeee;
+    align-items: center;
+    height: 3rem;
+    border-top: 1px solid #bebebe;
+  }
+  
+  .custom-TGbtn {
+    background-color: white;
+    border: none;
+  }
+  
+  .custom-Linkbtn {
+    background-color: white;
+    border: none;
+  }
+  
+  .share-img {
+    width: auto;
+    height: 100%;
+  }
+
+  .HeaderText {
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: none;
+  }
+
+  .custom-ArticleNav {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 2rem;
+    width: 100%;
+  }
+  
+
+
+  /* 其他設定 */
+/* 圖片九宮格 */
+
+.albumGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 三列 */
+  grid-gap: 10px;
+  /* 可根据需要设置间距 */
+}
+
+.albumDivGrandson {
+  width: 100%;
+  /* 充满父容器 */
+  height: 0;
+  padding-bottom: 100%;
+  /* 1:1 比例，可根据需要调整 */
+  position: relative;
+  overflow: hidden;
+}
+
+.albumDivGrandson img {
+  object-fit: cover;
+  border-radius: 10%;
+}

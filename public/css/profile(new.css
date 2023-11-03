@@ -1,0 +1,1630 @@
+@media screen and (max-width: 768px) {
+    /* 在小屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 在中等屏幕上应用的样式 */
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* 在大屏幕上应用的样式 */
+  }
+
+
+.body-container {
+  font-family: "Microsoft JhengHei", sans-serif;
+    position: absolute;
+    /* Fixed position from top */
+    width: calc(100%);
+    height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+    /*
+        原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+        - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+        - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+        综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+    */
+    background-color:#eeeeee;
+    overflow-y:scroll ;
+        
+}
+
+.ProfileHeadContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.setting-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: initial;
+}
+
+
+.email-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: initial;
+}
+
+.profile-name {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-nameLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.profile-namePic {
+    width: 4rem;
+    height: 4rem;
+    object-fit: initial;
+    border-radius: 50%;
+}
+
+.profile-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-nameLevel {
+    display: flex;
+    flex-direction: row;
+    width: 5rem;
+    background-color: rgba(114, 153, 177, 0.3);
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-nameLevel img {
+    width: auto;
+    height: 1rem;
+    margin-left: -0.5rem;
+}
+
+.profile-nameLevelText {
+    color: black;
+    font-size: 0.8rem;
+}
+
+.profile-nameCenterPic {
+    position: absolute;
+    margin-left: 7rem;
+    top: 7.2%;
+}
+
+.profile-nameRight {
+    background-color: blue;
+    color:white;
+    cursor: pointer; /* 鼠标悬停样式 */
+    border: none; /* 移除按钮边框 */
+    width: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    transition: background-color 0.3s ease; /* 添加过渡效果，使颜色变化平滑 */
+}
+
+.profile-nameRight.clicked {
+    background-color: gray; /* 按下状态下的背景颜色 */
+    pointer-events: none; /* 禁用按钮点击事件 */
+  }
+
+.profile-namesText {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-class {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+
+}
+
+.profile-classBTN {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.profile-classNumber {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.profile-classText {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.profile-classLine {
+    position: inherit;
+    color: #cecece;
+    font-size:2rem;
+    margin-top: 0.5rem;
+    margin-left:0;
+}
+
+.profile-money {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 90%;
+    align-items: center;
+    background: linear-gradient(to right, #fefcea 0%,#f2e7b8 0%,#e8cb81 100%); 
+    margin: 0 auto;/* 添加此样式来水平居中 */
+    border-radius: 1rem;
+}
+
+.profile-moneyLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-moneyLeftCoin {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile-moneyLeftCoinText {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color:#5e2609;
+}
+
+.profile-moneyLeftCoin img {
+    width:auto;
+    height: 1rem;
+    margin-left: 0.5rem;
+}
+
+.profile-moneyRightText {
+    width: 4rem;
+    background-color: #333;
+    color: rgb(250, 229, 210);
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0.5rem ;
+}
+
+.profile-moneyLeftText {
+    color:#5e2609;
+}
+
+.profile-myhire {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap:1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.profile-myhireTitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.profile-myhireBTN {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.profile-myhireBTNs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-myhireBTNs img {
+    width:2rem;
+    height: auto;
+}
+
+.profile-myhireBTNsText {
+    color: #aeaeae;
+}
+
+.profile-missionContainer {
+    background-color: white;
+    border-radius: 1rem;
+    width: 90%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-link{
+    color:#aeaeae;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.profile-mission {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #eeeeee;
+    padding: 1rem 0; /* 增加底部内边距 */
+}
+
+.profile-missionTabContainer {
+    margin: 1rem 0;
+}
+
+.profile-mission img {
+    width: auto;
+    height: 3rem;
+}
+
+
+.profile-missionAward {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:absolute;
+    margin-top: -2.2rem;
+    margin-left: 13rem;
+}
+
+.profile-missionAwardText {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.profile-missionAward  img{
+    width: auto;
+    height:1rem;
+}
+
+.profile-missionText {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-missionTextTitle {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.profile-missionTextTitle2 {
+    color: #aeaeae;
+    font-size: 0.8rem;
+}
+
+.profile-missionLeft {
+    gap:0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-missionBTN {
+    background-color: #fcd23a;
+    position: relative;
+    margin-top: 1.8rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    padding:0.1rem 0.5rem;
+    width:4rem;
+}
+
+.profile-missionBTNDone {
+    background-color: #eeeeee;
+    color: #bebebe;
+    position: relative;
+    margin-top: 1.8rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    padding:0.1rem 0.5rem;
+    width:4rem;
+}
+
+.profile-missiontimes {
+    position: relative;
+    margin-top: -0.5rem;
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.profile-missionAwardTab2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:absolute;
+    margin-top: -3.8rem;
+    margin-left: 13rem;
+}
+
+.profile-missionAwardTab2  img{
+    width: auto;
+    height:1rem;
+}
+
+.custom-sharebtn {
+    background-color: transparent;
+}
+
+.offcanvas-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-fullscreen.show {
+    transform: translateX(0);
+}
+
+.btn {
+    border: none;
+    padding: 0;
+}
+
+.custom-backbtn {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-backbtn img {
+    width: 2rem;
+    height: auto;
+}
+
+.profile-TGGroupBody {
+    padding: 0;
+    margin-top: 4.2rem;
+    background-color: #ebebeb;
+}
+
+.profile-TGGroupHeader {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 0;
+}
+
+.profile-WhoSeeMeHeader {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    background-color: white;
+    margin-left: 0;
+}
+
+.profile-TGGroupTitle {
+    position: fixed;
+    color: black;
+    font-weight: bold;
+    left: 40%;
+    font-size: 1.5rem;
+}
+
+
+.profile-TGGroupOfficial {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    background-color: white;
+    margin: 1rem 0;
+}
+
+.custom-PhoneNumberbackbtn {
+    position: absolute;
+    margin-left:2%;
+    top: 1%;
+    width: auto;
+    height: 4rem;
+    background-color: white;
+    border: none;
+}
+
+.custom-PhoneNumberbackbtn img {
+    width: auto;
+    height: 3rem;
+}
+
+.custom-settingbackbtn {
+    position: absolute;
+    margin-left:2%;
+    top: 1%;
+    width: auto;
+    height: 3rem;
+    background-color: white;
+    border: none;
+}
+
+.custom-settingbackbtn img {
+    width: auto;
+    height: 3rem;
+}
+
+.profile-TGGroupOfficialTitle {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.profile-TGGroupOfficialBTN {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 将内容分成三列 */
+    grid-gap: 2rem; /* 设置项目之间的间距，根据需要进行调整 */
+}
+
+.profile-TGGroupOfficialBTN a{
+    color: black;
+    text-decoration: none;
+}
+
+.profile-TGGroupOfficialBTNs {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中项目 */
+    text-align: center; /* 文字居中 */
+}
+
+.profile-TGGroupOfficialBTN img {
+    width: 2rem;
+    height: auto;
+}
+
+.profile-ContactUsTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    margin: 1rem;
+}
+
+.profile-ContactUsManager {
+    margin: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.profile-ContactUsManagerLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.profile-ContactUsManagerLeft img {
+    width: auto;
+    height: 3rem;
+}
+
+.profile-ContactUsManagerNmae {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    gap: 0.5rem;
+}
+
+.profile-ContactUsManagerNames {
+    font-weight: bold;
+    color: black;
+}
+
+.profile-ContactUsManagerNames2 {
+    color: #aeaeae;
+    font-size: 0.8rem;
+}
+
+.profile-ContactUsManagerRight {
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    width:5rem;
+    gap: 0.5rem;
+    height: 2rem;
+    align-items: center;
+    border-radius: 2rem;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.profile-ContactUsManagerRight img {
+    width:auto;
+    height: 1rem;
+}
+
+.profile-ContactUsManagerRightText {
+    color: white;
+    white-space: nowrap;
+}
+
+.profile-CompanyTitle {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 30% auto;
+    align-items: center;
+}
+
+.profile-CompanyTitles {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.profile-CompanyTitles2 {
+    color: #aeaeae;
+}
+
+.profile-CompanyTitle img {
+    width: auto;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: initial;
+    margin: 2rem 0;
+}
+
+.profile-CompanyContactUs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: blue;
+    color:white;
+    gap: 0.5rem;
+}
+
+.profile-CompanyContactUs img {
+    width: auto;
+    height: 1rem;
+}
+
+.profile-CompanyText {
+    color: #aeaeae;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 2rem; /* 控制图标距离输入框左侧的距离 */
+    z-index: 2; /* 确保图标在输入框之上 */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 2rem;
+    background-color: #eeeeee;
+    color: #aeaeae;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    caret-color: blue; /* 游标颜色为蓝色 */
+    padding: 0.5rem 0 0.5rem 3rem;
+}
+
+.profile-SubscribeList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0 1rem 0 1rem;
+}
+
+.profile-SubscribeName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom:1px solid #bebebe;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-SubscribeName img {
+    width: auto;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit:initial;
+}
+
+.profile-SubscribeNameText {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-SubscribeListNone {
+    display: flex;
+    justify-content: center;
+    background-color:transparent;
+    color: #bebebe;
+    margin-top: 1rem;
+}
+
+.profile-ArticleOfMineContainer {
+    background-color:white;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.profile-ArticleOfMineTabContainer {
+    gap: 1rem;
+}
+
+.ArticleOfMine {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #cecece;
+}
+
+.ArticleOfMine-Header {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.ArticleOfMine-HeaderProfileImg {
+    width: auto;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.1rem solid #bebebe;
+    object-fit:initial ;
+}
+
+.ArticleOfMine-HeaderName {
+    display: flex;
+    flex-direction: column;
+}
+
+.ArticleOfMine-HeaderNames {
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+}
+
+.ArticleOfMine-HeaderLevel {
+    color: #bebebe;
+    font-size: 0.8rem;
+}
+
+.ArticleOfMine-HeaderIconImg {
+    width: auto;
+    height: 1.5rem;
+    position: absolute;
+    margin-left: 8rem;
+}
+
+.ArticleOfMine-Body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    color: black;
+    text-decoration: none;
+}
+
+.ArticleOfMine-BodyText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.ArticleOfMine-BodyTexts {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.ArticleOfMine-BodyBlueText {
+    color: blue;
+    font-size: 1rem;
+}
+
+.ArticleOfMineImageGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 0.5rem ; 
+    justify-items: center;
+}
+
+.ArticleOfMineImageGroup img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: initial;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #bebebe;
+}
+
+.ArticleOfMine-Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.ArticleOfMine-FooterLeft {
+    display: flex;
+    flex-direction: row;
+    background-color: #eeeeee;
+    color: #bebebe;
+    gap: 0.3rem;
+    padding:0.2rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.ArticleOfMine-FooterLeft img {
+    width: auto;
+    height: 1rem;
+}
+
+.ArticleOfMine-FooterRight {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ArticleOfMine-FooterShareBTN {
+    display: flex;
+    flex-direction: row;
+    color: #bebebe;
+    font-size: 1rem;
+}
+
+.ArticleOfMine-FooterShareBTN img {
+    width: auto;
+    height: 1.5rem;
+}
+
+.ArticleOfMine-FooterCommentBTN {
+    display: flex;
+    flex-direction: row;
+    color: #bebebe;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.ArticleOfMine-FooterCommentBTN img {
+    width: auto;
+    height: 1.5rem;
+}
+
+.ArticleOfMine-FooterLikeBTN {
+    display: flex;
+    flex-direction: row;
+    color: #bebebe;
+    font-size: 1rem;
+}
+
+.ArticleOfMine-FooterLikeBTN img {
+    width: auto;
+    height: 1.5rem;
+}
+
+
+.CommentOfMine {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #cecece;
+    color: black;
+    text-decoration: none;
+}
+
+.CommentOfMine:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.CommentOfMine-Header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.CommentOfMine-Header img {
+    width: auto;
+    height: 3rem;
+    border-radius: 0.5rem;
+    object-fit: initial;
+}
+
+.CommentOfMine-HeaderName {
+    display: flex;
+    flex-direction: column;
+}
+
+.CommentOfMine-HeaderNames {
+    font-weight: bold;
+    color: black;
+}
+
+.CommentOfMine-HeaderTime {
+    font-size: 0.8rem;
+    color: #bebebe;
+}
+
+.CommentOfMine-Body {
+    margin: 1rem 0;
+    word-wrap: break-word; /* 自动换行 */
+}
+
+.CommentOfMine-Footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #eeeeee;
+    border-radius: 0.5rem;
+    padding:0.5rem ;
+    flex-wrap:wrap ;
+    font-size: 1rem;
+}
+
+.Growth-HeaderBlack {
+    background-color: black;
+    height:14rem;
+}
+
+.Growth-Header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Growth-HeaderProfileImg {
+    width:4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: initial;
+}
+
+.Growth-HeaderTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.Growth-HeaderText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #949494;
+    width: 8rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.Growth-CardContainer{
+    margin-top: -7rem;
+    height: 10rem;
+    overflow-x: hidden;
+}
+
+.card-slideContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+    height: 10rem;
+    margin: 0 10%;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图像的纵横比并填充整个容器 */
+}
+
+.card-text {
+    padding: 2rem;
+    position: absolute;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.card-content {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card-iconimg {
+    position:absolute;
+    right: 9%;
+    margin-top: 2rem;
+    width: auto;
+    height: 7rem;
+}
+
+.Growth-Body {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.CoinRatio {
+    gap: 0.5rem;
+}
+
+.CoinRatioTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.CoinRatioText {
+    font-size: 1rem;
+    color: #7a7a7a;
+}
+
+.Growth-Rules {
+    gap: 0.5rem;
+}
+
+.Growth-RulesTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.Growth-RulesText {
+    font-size: 1rem;
+    color: #7a7a7a;
+}
+
+.Growth-Tips {
+    gap: 0.5rem;
+}
+
+.Growth-TipsTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.Growth-TipsBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color:#d9dbdd;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.Growth-TipsBlockLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.Growth-TipsBlockLeftTitle {
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+}
+
+.Growth-TipsBlockLeftText {
+    color: #7a7a7a;
+    font-size: 0.8rem;
+}
+
+.Growth-TipsBlockRight {
+    color: #7a7a7a;
+    font-size: 1rem;
+}
+
+.object-full {
+    width: 100%;
+    height: inherit;
+}
+
+.SearchForAllPagesDetailCompanyContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    position: relative;
+    top: 7%;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.SearchForAllPagesDetailCompanyContainer2 {
+    background-color: white;
+    padding-bottom: 1rem;
+    margin: 0 1rem;
+}
+
+.SearchForAllPagesDetailCompanyHeader {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.SearchForAllPagesDetailCompanyTitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: calc(-4%);
+}
+
+
+
+.SearchForAllPagesDetailCompanyImgContainer {
+    width: 3rem; /* 调整容器的大小 */
+    height: 3rem;
+    overflow: hidden; /* 超出容器部分隐藏 */
+    border:0.1rem solid #888;
+    border-radius: 50%; /* 使容器成为圆形 */
+    display: flex; /* 让内部内容垂直和水平居中 */
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.SearchForAllPagesDetailCompanyImgIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: blue;
+    border: 0.1rem solid white;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-top: -1.2rem;
+    margin-left: 1.8rem;
+    font-size: 0.9rem;
+}
+
+
+/* 在容器内添加图像 */
+.SearchForAllPagesDetailCompanyImgContainer img {
+    width: 100%;
+    height: 100%;
+}   
+
+.SearchForAllPagesDetailCompanyName2 {
+    position: relative;
+    font-weight: bolder;
+    margin-left: calc(2%);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.SearchForAllPagesDetailCompanyJob {
+    display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+    background-color:transparent;
+    margin-left: calc(5%);
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.SearchForAllPagesDetailRequirements2 {
+    display: flex;
+    justify-content: flex-start;
+    background-color: none;
+    padding: 0 1rem;
+    margin-top: 2px;
+    text-align: center; /* 水平居中文本 */
+}
+
+.SearchForAllPagesDetailRequirement2 {
+    display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+    background-color:#f5f5f5;
+    padding: 5px;
+    margin-right:10px; /* 减少左右外边距，使格子更接近 */
+}
+
+.SearchForAllPagesDetailJobCard {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0.7rem;
+    position: relative;
+    border: none;
+    background-color: #e9e9e9;
+    margin: 4rem 0 1rem 0;
+    gap: 1rem;
+}
+
+.SearchForAllPagesDetailJobCardContainer {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: 12rem;
+}
+
+.SearchForAllPagesDetailHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.SearchForAllPagesDetailJobCardTitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.SearchForAllPagesDetailSalary {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.SearchForAllPagesDetailBlueText {
+    color: blue;
+    font-size: 1.2rem;
+}
+
+.SearchForAllPagesDetailRequirements {
+    display: flex;
+    justify-content: flex-start;
+    background-color: none;
+    padding: 10px 0;
+    margin-top: 2px;
+    text-align: center; /* 水平居中文本 */
+    margin-left: -0.1rem;
+}
+
+.SearchForAllPagesDetailRequirement {
+    display: inline-block; /* 使用inline-block排列，根据内容自动调整宽度 */
+    background-color:#f8f8f8;
+    padding: 5px;
+    margin-right:10px; /* 减少左右外边距，使格子更接近 */
+}
+
+.SearchForAllPagesDetailCompany {
+    position: relative;
+    bottom: -2px;
+    left: -2px;
+    display: flex;
+    align-items: center;
+}
+
+.SearchForAllPagesDetailCompany img {
+    width: 20px; /* 根据需要调整图片大小 */
+    height: 20px;
+    margin-right: 5px;
+}
+
+.SearchForAllPagesDetailCompanyInfo {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.SearchForAllPagesDetailCompanyName {
+    margin-left: 5px; /* 可以根据需要调整间距 */
+}
+
+.SearchForAllPagesDetailCompanyTimeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 0.1rem solid #eeeeee;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+}
+
+.SearchForAllPagesDetailCompanyTime {
+    font-size: 0.8rem;
+    color: #aeaeae;
+}
+
+.SearchForAllPagesDetailCompanyConfirmText {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.InterviewHistoryBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    align-items: center;
+}
+
+.InterviewHistoryBox img {
+    width: 9rem;
+    height: 7rem;
+}
+
+.InterviewHistoryBoxText {
+    color: #6a6a6a;
+}
+
+.InterviewHistoryBTN {
+    background-color: blue;
+    color: white;
+    width: 9rem;
+    height: 3rem;
+    display: flex;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 半透明背景遮罩 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    z-index: 998; /* 应低于对话框的 z-index */
+    display: none; /* 初始状态隐藏 */
+}
+
+.MyResumeBody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 1rem;
+    top: 6%;
+    background-color: #f3f3f3;
+}
+
+.MyResumeTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.MyResumeTitleRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.MyResumeTitleRowBold {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.MyResumeTitleRowNormal {
+    color: #828282;
+}
+
+.MyResumeTitleDetail {
+    color: #828282;
+}
+
+.MyResumeName {
+    background-color: white;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.MyResumeNameText {
+    border: none;
+    background-color: white;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.MyResumeNameTextInput {
+    background-color: white;
+    border: none;
+}
+
+.MyResumeGenderBTNContainerSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 0;
+    border-bottom: 0.1rem solid #f2f2f2;
+    padding: 0.5rem 0;
+}
+
+.MyResumeGenderBTN {
+    background-color: #e8e8e8;
+    flex-direction: row;
+    border-radius: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+}
+
+.MyResumeGenderBTN.active {
+    background-color: white;
+    color: black;
+    border: 0.1rem solid rgb(93, 181, 237);
+}
+
+.MyResumeGenderBTN img {
+    height: 1rem;
+    width: auto;
+}
+
+.MyResumeGenderBTNText {
+    color: #848484;
+}
+
+.MyResumeGenderBTNContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+.MyResumeBirthdayBTN {
+    background-color:transparent;
+    flex-direction: row;
+    border-radius: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+}
+
+.MyResumeBirthdayBTN img {
+    height: 1rem;
+    width: auto;
+}
+
+.MyResumeContactOption {
+    color: blue;
+    width: 11rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.MyResumeContactOption:hover {
+    color: blue;
+}
+
+.MyResumeContactOption img {
+    width: auto;
+    height: 1rem;
+}
+
+.MyResumeAddAnotherContact {
+    border: 0.1rem solid blue;
+    color: blue;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    margin: 5rem 0.5rem;
+    width: 90%;
+    font-size: 1.1rem;
+}
+
+#upperradio input[type="radio"] {display: none; }
+#upperradio input:checked + .button {background: #d1daff; color: blue; cursor: default; }
+#upperradio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #888; cursor: pointer; }
+#upperradio .button:hover {background: #bbb; color: #fff; }
+#upperradio .round {border-radius: 5px; width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.checkbox-title {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 1rem 40%;
+}
+
+.custom-check {
+    color: gray;
+    background-color: #bebebe;
+    border: none;
+}
+
+.custom-check:hover {
+    background-color:rgb(193, 230, 255);
+    color: blue;
+    border: none;
+}
+
+.custom-MyResumeLanguagebackbtn {
+    margin: 1rem;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-MyResumeLanguagebackbtn img {
+    width: auto;
+    height: 2rem;
+}
+
+.MyResumeLanguageoffcanvas-halfscreen {
+    width: 100%;
+    height: 30%;
+    overflow-y: scroll;
+    background-color:white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.MyResumeLanguageconfirmBTN {
+    position: relative;
+    width: 95%;
+    height: 2rem;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2.5%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.custom-checkbox {
+    padding: 1rem;
+}
+
+.MyResumeNameTextDetail {
+    color: #b1b1b1;
+    font-size: 0.8rem;
+    position: relative;
+    margin: -1.8rem 0 0 6rem;
+}
+
+.MyResumePersonalProfileTextContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.8rem;
+}
+
+.MyResumePersonalProfileText {
+    color: #aeaeae;
+    font-size: 0.9rem;
+}
+
+.MyResumePersonalProfileSaveBTN {
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-MyResumePersonalProfileHeader {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+}
+
+.MyResumePersonalProfileTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.MyResumePersonalProfileTitleBold {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.MyResumePersonalProfileNormal {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: #9e9e9e;
+}
+
+.MyResumePersonalProfileInputBox {
+    background-color: #f3f3f3;
+    height: 85%;
+    width: 100%;
+    margin-top: 1rem;
+}

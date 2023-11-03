@@ -1,0 +1,495 @@
+/* 遮罩层样式 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明灰色 */
+    z-index: 1001;
+    /* 设置合适的 z-index 值 */
+    display: none;
+    /* 初始时不显示遮罩层 */
+}
+
+
+
+/* .topestDiv{
+    background-image: url(../img/authorBackground.jpg);
+    background-size: cover;
+    background-size: no-repeat;
+} */
+
+#authorPageHeadPicBack{
+    background-image: url(../img/authorBackground.jpg);
+    background-size: cover;
+    background-size: no-repeat;
+}
+
+.topest{
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topest svg{
+    color: aliceblue;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.centerest1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+ 
+}
+
+.bigHeadDiv img{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: 1px solid white; /* 添加白色边框 */
+}
+
+#cancelBt{
+    color: white;
+    background-color: transparent;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.centerest2{
+    color: aliceblue;
+    margin-left: 10px;
+    padding-bottom: 15px;
+}
+
+.centerest2>div:nth-child(1){
+    font-size: 30px;
+}
+
+.centerest2>div:nth-child(2){
+    font-size: 15px;
+    height: 100px;
+}
+.centerest2>div:nth-child(2)>span{
+    font-size: 15px;
+}
+
+.centerest2>div:nth-child(3){
+    display: flex;
+}
+
+#followingCount{
+    margin-left: 10%;
+}
+
+/* .lastPart{
+    background-color: brown;
+} */
+.lastPartBtDiv{
+    border-bottom: 1px gray solid;
+    padding-bottom: 3px;
+}
+.slick-dots li.slick-active button {
+    font-weight: normal !important;
+    color: #000ecc !important;
+    border-bottom: #000ecc 3px solid;
+    font-size: 15px;
+}
+
+.slick-dots {
+    justify-content: flex-start !important;
+}
+
+.slick-dots li:last-child button {
+    width: 50px !important;
+}
+
+.slick-dots li button {
+    margin-left: 20px;
+}
+
+
+/* 動態(套推薦頁面的模板 */
+.authorInfoFa{
+    padding: 20px;
+}
+
+#authorCon {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.articleContent {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+}
+
+
+.authorImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.authorText {
+    padding: 0 10px;
+    /* 可以添加一些內間距 */
+}
+
+.authorTag {
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+}
+
+.authorName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.authorIdentity {
+    font-size: 15px;
+    color: gray;
+}
+
+.viewMore {
+    color: blue;
+}
+
+.shareCon button:nth-child(n+2) {
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+    border: none;
+}
+
+
+
+.shareCon button>img {
+    width: 20px;
+    height: 20px;
+}
+
+.discussion {
+    color: #666666;
+    border: none;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+
+}
+
+.articleContent span:nth-child(1) {
+    display: block;
+    max-height: 2.8em;
+    /* 两行文字的高度 */
+    line-height: 1.4em;
+    /* 单行文字的高度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lastWord {
+    text-align: center;
+    color: gray;
+}
+
+.imgsCon {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 10px;
+}
+
+
+.imgsCons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 10px;
+    /* 上下距离 */
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.imgsCon1 {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+
+.imgsCon2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.shareCon img {
+    display: inline !important;
+}
+
+.shareCon span {
+    font-size: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    color: gray;
+}
+
+.jobTagContainer {
+    background-color: #e2e2e2;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.jobTag img {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.BigjobTagContainer {
+    display: flex;
+    margin-top: 10px;
+}
+
+.jobDivSon1 {
+    width: 100%;
+    overflow: auto;
+    /* 隐藏外部容器的溢出内容 */
+}
+
+.jobDivSon2 {
+    width: 100%;
+    overflow-x: scroll;
+    /* 允许内容滚动 */
+    white-space: nowrap;
+    /* 防止内容换行 */
+}
+
+
+
+
+/* 論壇分享按鈕區塊 */
+.divNone {
+    display: none;
+}
+#forumShareCon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1003;
+    background-color: #E0E0E0;
+    height: 200px;
+}
+
+#forumShareButton {
+    display: flex;
+    justify-content: left;
+    padding: 10% 0;
+}
+
+#forumShareCancelButton {
+    border-top: #666666 1px solid;
+    text-align: center;
+    height: 30%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#forumCopyCon {
+    display: flex;
+    flex-direction: column;
+    /* 上下排列 */
+    align-items: center;
+    /* 水平居中对齐 */
+    text-align: center;
+    /* 文字水平居中对齐 */
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+#forumTelegramCon {
+    display: flex;
+    flex-direction: column;
+    /* 上下排列 */
+    align-items: center;
+    /* 水平居中对齐 */
+    text-align: center;
+    /* 文字水平居中对齐 */
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+#forumCopyCon span {
+    margin-top: 10px;
+}
+
+#forumTelegramCon span {
+    margin-top: 10px;
+}
+
+
+#tgBt {
+    width: 50px;
+    /* 按钮宽度 */
+    height: 50px;
+    /* 按钮高度 */
+    border: none;
+    /* 去除边框 */
+    cursor: pointer;
+    /* 鼠标样式为手型 */
+}
+
+#tgBt img,
+#copyBt img {
+    width: 50px;
+    /* 按钮宽度 */
+    height: 50px;
+    /* 按钮高度 */
+}
+
+#copyBt {
+    width: 50px;
+    /* 按钮宽度 */
+    height: 50px;
+    /* 按钮高度 */
+    border: none;
+    /* 去除边框 */
+    cursor: pointer;
+    /* 鼠标样式为手型 */
+}
+
+/* 複製連結提示框 */
+/* 调整模态框位置 */
+#copyDiv {
+    font-size: 15px;
+    position: relative;
+    top: 70%;
+    left: 35%;
+    width: fit-content;
+}
+
+/* 移除背景遮罩 */
+.modal-backdrop {
+    display: none;
+}
+
+
+
+
+/* 資料tab的部分 */
+#informationDiv{
+    padding: 20px;
+}
+
+#informationDiv > div{
+    margin-bottom: 10px;
+}
+
+#informationDiv>div:nth-child(1),
+#informationDiv>div:nth-child(3),
+#informationDiv>div:nth-child(5),
+#informationDiv>div:nth-child(7) {
+    color: gray;
+    font-size: 15px;
+}
+
+#informationDiv>div:nth-child(2),
+#informationDiv>div:nth-child(4),
+#informationDiv>div:nth-child(6),
+#informationDiv>div:nth-child(8) {
+    color: black;
+    font-size: 18px;
+}
+
+
+
+/* 相冊tab的部分 */
+.authorPageAlbumGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 三列 */
+    grid-gap: 10px; /* 可根据需要设置间距 */
+}
+
+.albumDivGrandson {
+    width: 100%; /* 充满父容器 */
+    height: 0;
+    padding-bottom: 100%; /* 1:1 比例，可根据需要调整 */
+    position: relative;
+    overflow: hidden;
+}
+
+.albumDivGrandson img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 裁剪以适应 */
+}
+
+#authorPageAlbumDiv{
+    padding: 10px 15px;
+}
+
+.authorPageShotTime{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.authorLevel {
+    color: #fff;
+    font-size: 10px;
+    width: 50px;
+    background-size: cover;
+    text-align: right;
+    margin-left: -20px;
+    padding-right: 10px;
+  }
+
+
+/* 查無更多內容 */
+.localConBodyNewsPic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#localConBodyNewsText {
+  color: gray;
+  font-size: 25px;
+}
+
+.localConBodyNewsPic img {
+  width: 200px;
+  height: 200px;
+}

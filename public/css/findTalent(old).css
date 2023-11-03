@@ -1,0 +1,133 @@
+.body-container {
+    font-family: "Microsoft JhengHei", sans-serif;
+      position: absolute;
+      /* Fixed position from top */
+      width: calc(100%);
+      height: auto; /*100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。*/
+      /*
+          原：100vh: 这代表视口高度的百分比，也就是浏览器窗口的高度。100vh 表示整个视口高度，相当于屏幕的高度。
+          - 146px: 这是从视口高度中减去的固定像素值，通常用于顶部导航栏等元素的高度。在这个例子中，从视口高度中减去了 146 像素。
+          - 104px: 这是从视口高度中减去的另一个固定像素值，通常用于底部的页脚等元素。在这个例子中，从视口高度中减去了 104 像素。
+          综合起来，这段样式设置了一个元素的高度，这个高度占据了整个视口高度，然后从中减去了 146 像素和 104 像素，以适应上部和下部的固定元素（例如导航栏和页脚）。
+      */
+      background-color: white;
+      overflow-y:scroll ;
+      &::-webkit-scrollbar{
+          width: 0px;
+          }
+          
+  }
+  
+  .header {
+      background-color: white;
+      display: flex;
+      flex-direction:row;
+      width: 100%;
+      height: 5rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      justify-content: space-around;
+      border-bottom: 0.1rem solid #dedede;
+      z-index: 100;
+      align-items: center;
+  }
+
+  .header-img1 {
+    height: 2.5rem;
+    width: auto;
+}
+
+
+  .header-title {
+    position: absolute;
+    font-size: 1.5rem;    
+    font-weight: bold;
+  }
+  
+  .custom-backbtn {
+    position: absolute;
+    left: 0;
+    background-color: transparent; /* 设置背景色为透明 */
+    border-color: transparent; /* 设置边框颜色为透明 */
+    color: #333; /* 设置文本颜色 */
+  }
+  
+  .custom-backbtn:hover {
+    background-color: transparent;
+  }
+
+
+  .custom-zpbtn {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 4rem;
+    height: 1.8rem;
+    background-color: white;
+    border: white;
+    color: black;
+    right: 4%;
+    padding: 0.1rem;
+    margin-top: -0.5rem;
+  }
+
+  .modal-open .modal {
+    overflow-y:hidden ;
+    overflow-x: hidden;
+  }
+
+  .custom-zpmodal {
+    position: absolute;
+    top: 15rem;
+    left:10%;
+    border-radius: 2rem;
+    width: 80%;
+    height: 13rem;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .modal-content {
+    border:none;
+  }
+
+  .zpmodal {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+  }
+
+  .zpTitle {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    padding:0 1rem;
+  }
+
+  .zpText {
+    color: #f3ba49;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+  }
+
+  .custom-identifybtn {
+    background-color: blue;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .custom-closebtn {
+    position: absolute;
+    left: 43%;
+    top:9.5rem;
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
