@@ -70,18 +70,24 @@ const routes = [
   },
 
   {
-    path: "/findTalent", // 子路由的路徑是相對於父路由的路徑的
+    path: "/findTalent", 
     name: "findTalent",
     component: () =>
       import(/* webpackChunkName: "job-list" */ "../views/hire/FindTalent.vue"),
   },
   {
-    path: "/findCompany", // 帶參數的子路由
+    path: "/findCompany",
     name: "findCompany",
     component: () =>
       import(
         /* webpackChunkName: "job-details" */ "../views/hire/FindCompany.vue"
       ),
+  },
+  {
+    path: "/hireDetail/:id",
+    name: "hireDetail",
+    component: () =>
+      import(/* webpackChunkName: "hello" */ "../views/hire/HireDetail.vue"),
   },
   // 我的
   {
@@ -231,12 +237,29 @@ const routes = [
         /* webpackChunkName: "hello" */ "../views/community/CommunityView.vue"
       ),
   },
+  // 全局搜索
+  {
+    path: "/Search1",
+    name: "Search1",
+    component: () =>
+      import(
+        /* webpackChunkName: "hello" */ "../views/search/SearchView1.vue"
+      ),
+  },
+  {
+    path: "/Search2",
+    name: "Search2",
+    component: () =>
+      import(
+        /* webpackChunkName: "hello" */ "../views/search/SearchView2.vue"
+      ),
+  },
   //測試用
   {
     path: "/test",
     name: "test",
     component: () =>
-      import(/* webpackChunkName: "hello" */ "../views/TestView.vue"),
+      import(/* webpackChunkName: "hello" */ "../views/search/SearchView2.vue"),
   },
 ];
 

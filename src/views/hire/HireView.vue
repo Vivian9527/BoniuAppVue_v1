@@ -25,12 +25,9 @@
     <van-tab title="熱門">
       <div>
         <!-- BananaFish:路由還沒改 -->
-        <router-link
-          v-for="item in getjobData"
-          :key="item.id"
-          :to="{ name: 'author', params: { id: item.id } }"
-          @click="$shareFunctions.getUserContent(item.id)"
-        >
+        <router-link :to="{ name: 'hireDetail', params: { id: item.id } }" @click="$hireFun.getJobcontent(item.id)" v-for="item in getjobData"
+          :key="item.id">
+       
           <div class="job-card">
             <div class="header">
               <div class="title">

@@ -326,8 +326,8 @@ const mutations = {
   "ws/job_typeAll"(state, payload) {
     state.job_typeAllData = payload;
   },
-  "ws/job_jobcontent"(state, payload) {
-    state.job_jobcontentData = payload;
+  "ws/job_jobcontent"(state, { jid, data }) {
+    state.job_jobcontentData[jid] = data;
   },
   // 社區
   "ws/PlateIndex"(state, payload) {

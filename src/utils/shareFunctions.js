@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 
 const token = Cookies.get("token");
 
+// 作者
 export function getUserContent(uid, index) {
   console.log("發出作者請求" + uid);
   const requestData = {
@@ -17,7 +18,7 @@ export function getUserContent(uid, index) {
   };
   send(requestData);
 }
-
+// 文章
 export function SentArticleApi(tid) {
   console.log("發出文章請求" + tid);
   const requestData = {
@@ -27,19 +28,7 @@ export function SentArticleApi(tid) {
   };
   send(requestData);
 }
-
-export function homeChoiceCategory(type) {
-  console.log("發出精選內頁請求" + type);
-  const requestData = {
-    apiName: "homeChoiceCategory",
-    token,
-    type,
-    index: 1,
-    pageSize: 10,
-  };
-  send(requestData);
-}
-
+// 論壇
 export function getAllPlateContent(fid, shaixuan, index) {
   console.log("發出論壇請求" + fid);
   const requestData = {
@@ -51,11 +40,13 @@ export function getAllPlateContent(fid, shaixuan, index) {
   };
   send(requestData);
 }
+//勳章BananaFish:給其他作者的勳章API沒寫
 
 
 
 
 
+// BananaFish之後要搬(index)
 // 推薦關注
 export function homePushFollowerApi() {
   const requestData = {
@@ -119,6 +110,8 @@ export function gethomeChoiceCategory(type) {
   send(requestData);
 }
 
+
+
 // 取得 本地頁面BBS api資料(獲取使用者位置後傳去後端在取得資料)
 export function gethomeLocalBBS(local) {
   const requestData = {
@@ -149,6 +142,18 @@ export function gethomeLocalNews(local) {
 export function gethomeBusiness(type) {
   const requestData = {
     apiName: "homeBusiness",
+    token,
+    type,
+    index: 1,
+    pageSize: 10,
+  };
+  send(requestData);
+}
+
+export function homeChoiceCategory(type) {
+  console.log("發出精選內頁請求" + type);
+  const requestData = {
+    apiName: "homeChoiceCategory",
     token,
     type,
     index: 1,

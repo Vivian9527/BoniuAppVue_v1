@@ -209,7 +209,11 @@ function connect() {
       store.commit("ws/ws/job_typeAll", data.data);
     }
     if (data.apiName === "job_jobcontent") {
-      store.commit("ws/ws/job_jobcontent", data.data);
+      console.log(data)
+      store.commit("ws/ws/job_jobcontent",{
+        jid: data.data[0].id,
+        data: data.data[0],
+      });
     }
 
     // 社區
